@@ -4,7 +4,9 @@ class Application extends React.Component {
   render() {
     return (
       <div className="application">
-        <Helmet>
+        <Helmet htmlAttributes={{
+          lang: 'en',
+        }}>
           <meta charSet="utf-8" />
           <title>Gatsby Recipes</title>
           <link rel="canonical" href="https://samplegatsbyrecipepage.gatsbyjs.io/" />
@@ -17,7 +19,6 @@ export default function Home() {
   return (
     <>
       <Application />
-      <title>Test Page</title>
       <div>Hello world!</div>
     </>
   )
