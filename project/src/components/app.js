@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const app = () => {
+const App = () => {
   return (
     <div className='application'>
       <Helmet htmlAttributes={{
@@ -16,4 +16,4 @@ const app = () => {
   )
 }
 
-export default app
+export default App

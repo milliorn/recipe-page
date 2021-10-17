@@ -1,12 +1,14 @@
 import React from 'react'
 import { siteMetadata } from '../../gatsby-config'
-import app from '../components/app'
+import App from '../components/app.js'
 
-export default function Home() {
+const Home =() => {
   return (
     <>
-      <app/>
+      <App/>
       <div>Hello {siteMetadata.title}!</div>
     </>
   )
 }
+
+export default Home
