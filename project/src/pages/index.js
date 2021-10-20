@@ -1,12 +1,17 @@
 import React from 'react'
 import { siteMetadata } from '../../gatsby-config'
 import App from '../components/app.js'
+import { Link } from 'gatsby'
 
-const Home =() => {
+const Home = () => {
   return (
     <>
-      <App/>
-      <div>Hello {siteMetadata.title}!</div>
+      <App />
+      <div>Hello {siteMetadata.title}!</div><br />
+      <Link to='/contact'>contact</Link><br />
+      <Link to='/about'>about</Link><br />
+      <Link to='/company'>company</Link><br />
+      <Link to='/company/history'>history</Link><br />
     </>
   )
 }
