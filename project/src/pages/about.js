@@ -1,17 +1,14 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import Navbar from "../components/navbar";
 
 const About = () => {
   return (
     <>
-      <div>
-        Hello About!
-      </div><br />
-      <div>
-        <Link to='/'>Home</Link>
-      </div>
+      <Navbar />
+      <div>Hello About!</div>
+      <br />
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -1,16 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-
+import React from "react";
+import Navbar from "../components/navbar";
 const Contact = () => {
   return (
     <>
-      <div>
-        Hello Contact!
-      </div>
+      <Navbar />
+      <div>Hello Contact!</div>
       <br />
-      <Link to='/'>Home</Link>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

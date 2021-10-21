@@ -1,17 +1,14 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import Navbar from "../../components/navbar";
 
 const Index = () => {
   return (
     <>
-      <div>
-        Hello Company!
-      </div><br/>
-      <div>
-        <Link to='/'>Home</Link>
-      </div>
+      <Navbar />
+      <div>Hello Company!</div>
+      <br />
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

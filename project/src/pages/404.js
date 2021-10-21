@@ -1,17 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import Navbar from "../components/navbar";
 
 const PageNotFound = () => {
   return (
     <>
-      <div>
-        404 Page Not Found!?
-      </div> <br />
-      <div>
-        <Link to='/'>Home</Link>
-      </div>
+      <Navbar />
+      <div>404 Page Not Found!?</div> <br />
     </>
-  )
-}
+  );
+};
 
-export default PageNotFound
+export default PageNotFound;
