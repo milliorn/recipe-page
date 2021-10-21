@@ -1,8 +1,8 @@
-import React from "react";
-import { siteMetadata } from "../../gatsby-config";
-import App from "../components/app.js";
-import { Link } from "gatsby";
-import Navbar from "../components/navbar";
+import React from 'react'
+import { siteMetadata } from '../../gatsby-config'
+import App from '../components/app.js'
+import { Link } from 'gatsby'
+import Navbar from '../components/navbar'
 
 const Home = () => {
   return (
@@ -11,16 +11,16 @@ const Home = () => {
       <App />
       <div>Hello {siteMetadata.title}!</div>
       <br />
-      <Link to="/contact">contact</Link>
+      <Link to='/contact'>contact</Link>
       <br />
-      <Link to="/about">about</Link>
+      <Link to='/about'>about</Link>
       <br />
-      <Link to="/company">company</Link>
+      <Link to='/company'>company</Link>
       <br />
-      <Link to="/company/history">history</Link>
+      <Link to='/company/history'>history</Link>
       <br />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,5 +1,5 @@
-import React from "react";
-import Navbar from "../../components/navbar";
+import React from 'react'
+import Navbar from '../../components/navbar'
 
 const Index = () => {
   return (
@@ -8,7 +8,7 @@ const Index = () => {
       <div>Hello Company!</div>
       <br />
     </>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

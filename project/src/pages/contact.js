@@ -1,5 +1,5 @@
-import React from "react";
-import Navbar from "../components/navbar";
+import React from 'react'
+import Navbar from '../components/navbar'
 const Contact = () => {
   return (
     <>
@@ -7,7 +7,7 @@ const Contact = () => {
       <div>Hello Contact!</div>
       <br />
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

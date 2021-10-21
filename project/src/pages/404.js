@@ -1,5 +1,5 @@
-import React from "react";
-import Navbar from "../components/navbar";
+import React from 'react'
+import Navbar from '../components/navbar'
 
 const PageNotFound = () => {
   return (
@@ -7,7 +7,7 @@ const PageNotFound = () => {
       <Navbar />
       <div>404 Page Not Found!?</div> <br />
     </>
-  );
-};
+  )
+}
 
-export default PageNotFound;
+export default PageNotFound

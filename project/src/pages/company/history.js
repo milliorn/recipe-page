@@ -1,5 +1,5 @@
-import React from "react";
-import Navbar from "../../components/navbar";
+import React from 'react'
+import Navbar from '../../components/navbar'
 
 const History = () => {
   return (
@@ -8,7 +8,7 @@ const History = () => {
       <div>Hello History!</div>
       <br />
     </>
-  );
-};
+  )
+}
 
-export default History;
+export default History
