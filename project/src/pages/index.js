@@ -8,7 +8,14 @@ export default function Home() {
   return (
     <Layout>
       <App />
-      <div>Hello {siteMetadata.title}!</div>
+      <h1
+        style={{
+          color: 'red',
+          textTransform: 'capitalize'
+        }}
+      >
+        hello {siteMetadata.siteMetadata.title}!
+      </h1>
       <br />
       <Link to="/contact">contact</Link>
       <br />
