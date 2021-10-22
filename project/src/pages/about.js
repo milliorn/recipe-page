@@ -1,13 +1,12 @@
 import React from 'react'
-import Navbar from '../components/navbar'
+import Layout from '../components/Layout'
 
 const About = () => {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div>Hello About!</div>
       <br />
-    </>
+    </Layout>
   )
 }
 
