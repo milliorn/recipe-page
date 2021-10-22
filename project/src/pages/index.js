@@ -1,10 +1,10 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { siteMetadata } from '../../gatsby-config'
+import siteMetadata from '../../gatsby-config'
+import App from '../components/app'
 import Layout from '../components/Layout'
-import App from '../components/App'
 
-const Home = () => {
+export default function Home() {
   return (
     <Layout>
       <App />
@@ -21,5 +21,3 @@ const Home = () => {
     </Layout>
   )
 }
-
-export default Home

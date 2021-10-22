@@ -10,7 +10,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "lint": "npx prettier --write .",
-    "clean": "gatsby clean & npm run lint && npm prune && npm dedupe && npm install",
+    "clean": "gatsby clean && npm prune && npm dedupe && npm install && npm run lint",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
