@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { siteMetadata } from '../../gatsby-config'
-import App from '../components/App.js'
 import Layout from '../components/Layout'
+import App from '../components/App'
 
 const Home = () => {
   return (
