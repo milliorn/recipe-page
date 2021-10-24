@@ -1,8 +1,11 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: greenyellow;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-h1 {
-    color: blueviolet;
+.about-heading {
+  color: greenyellow;
+}
+
+.home-heading {
+  color: blueviolet;
 }
