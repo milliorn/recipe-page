@@ -3,7 +3,9 @@ body {
 }
 
 .about-heading {
-  color: greenyellow;
+  color: green;
+  font-weight: bolder;
+  font-size: xx-large;
 }
 
 .home-heading {
