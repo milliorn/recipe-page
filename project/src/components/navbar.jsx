@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
+import { ImHome } from 'react-icons/im'
 const Navbar = () => {
-  return (
+	return (
     <nav>
+      <ImHome />
       <ul>
         <li>
           <Link to="/">Home</Link>
