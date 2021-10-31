@@ -370,7 +370,7 @@ form > *:last-child {
   transition: var(--transition);
 }
 .show-links {
-  height: 23.9375rem;
+  height: 383px;
 }
 
 .nav-link {
