@@ -4,11 +4,5 @@ module.exports = {
     siteUrl: `https://samplegatsbyrecipepage.gatsbyjs.io`,
     description: `Blazing fast modern site generator for React`
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp` // Needed for dynamic images
-  ]
+  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-styled-components`]
 }
