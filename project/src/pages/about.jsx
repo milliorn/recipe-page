@@ -19,8 +19,8 @@ const About = () => {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Necessitatibus fugit voluptatem, event at qui illo. Nobis sed
-              atque reprehenderit provident illum deceit, new uint enim
-              dolorum voluptatem ut. Ab, error distinctio!
+              atque reprehenderit provident illum deceit, new uint enim dolorum
+              voluptatem ut. Ab, error distinctio!
             </p>
             <Link to="/contact" className="btn">
               contact
