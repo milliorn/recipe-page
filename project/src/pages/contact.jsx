@@ -43,7 +43,7 @@ const Contact = () => {
                   id="message"
                   cols="30"
                   rows="10"
-                ></textarea>
+                 />
               </div>
               <button type="submit" className="btn block">
                 submit
