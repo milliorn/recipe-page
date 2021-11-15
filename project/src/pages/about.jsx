@@ -9,18 +9,18 @@ const About = () => {
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit!</h2>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-              tenter dicta ut voluptas aliquam placeat. Odio, minus rerum?
-              Possimus quaerat et ab ipsum accusamus, id corporis perspiciatis
-              omnis. Soluta, ab?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis assumed voluptatibus est vel reprehenderit sed aut
+              harum, non ut. Nisi nullo blanditiis dolor minima excepturi
+              aliquam volute expedita voluptatum veritatis.
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Aspernatur tempore laudantium ad perspiciatis dolorem est omnis
-              consectetur tenetur dolorum, nisi cupiditate quidem similique
-              porro laboriosam aut nam vel veritatis veniam!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus fugit voluptatem, event at qui illo. Nobis sed
+              atque reprehenderit provident illum deceit, new uint enim
+              dolorum voluptatem ut. Ab, error distinctio!
             </p>
             <Link to="/contact" className="btn">
               contact
@@ -28,10 +28,8 @@ const About = () => {
           </article>
           <StaticImage
             src="../assets/images/about.jpeg"
-            alt="about"
-            className="about-img"
-            placeholder="blurred"
-          ></StaticImage>
+            alt="Person Pouring Salt in Bowl"
+          />
         </section>
       </main>
     </Layout>
