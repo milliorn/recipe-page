@@ -38,12 +38,7 @@ const Contact = () => {
               </div>
               <div className="form-row">
                 <label htmlFor="message">message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                 />
+                <textarea name="message" id="message" cols="30" rows="10" />
               </div>
               <button type="submit" className="btn block">
                 submit

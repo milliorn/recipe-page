@@ -13,7 +13,7 @@ export default function Home() {
             className='"hero-img'
             placeholder="tracedSVG"
             layout="fullWidth"
-           />
+          />
           <div className="hero-container">
             <div className="hero-text">
               <h1>React Recipes</h1>
