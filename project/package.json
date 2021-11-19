@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "npm run clean & gatsby build",
-    "develop": "npm run lint && gatsby develop",
-    "start": "npm run clean & gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "lint": "npx prettier --write .",
     "clean": "gatsby clean && npm prune && npm dedupe && npm install && npm run lint",
