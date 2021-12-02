@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 
 const Contact = () => {
   return (
@@ -50,5 +51,24 @@ const Contact = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulRecipe(
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        id
+        title
+        cookTime
+        prepTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`
 
 export default Contact
