@@ -6,9 +6,11 @@
   "version": "0.1.0",
   "scripts": {
     "build": "gatsby build",
-    "clean": "gatsby clean && npm prune && npm dedupe && npm install && npm run lint",
+    "clean": "gatsby clean",
+    "dedupe": "npm dedupe",
     "develop": "gatsby develop",
     "lint": "npx prettier --write .",
+    "prune": "npm prune",
     "serve": "gatsby serve",
     "start": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
