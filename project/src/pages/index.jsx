@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import AllRecipes from '../components/AllRecipes'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import React from 'react'
 
 export default function Home() {

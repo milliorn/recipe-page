@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
 import { Link, graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import Layout from '../components/Layout'
+import React from 'react'
 import RecipesList from '../components/RecipesList'
 
 const About = ({
@@ -39,7 +39,7 @@ const About = ({
           />
         </section>
         <section className="featured-recipes">
-          <h5>Look at this Awesomesouce!</h5>
+          <h5>Look at this!</h5>
           <RecipesList recipes={recipes} />
         </section>
       </main>

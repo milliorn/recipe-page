@@ -1,6 +1,6 @@
-import React from 'react'
-import Layout from '../components/Layout'
 import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import React from 'react'
 import setupTags from '../utils/setupTags'
 
 const Tags = ({ data }) => {
