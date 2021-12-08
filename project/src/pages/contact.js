@@ -1,8 +1,10 @@
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
+import RecipesList from '../components/RecipesList'
 
-const Contact = () => {
+const Contact = ({ data }) => {
+  const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
       <main className="page">
@@ -39,13 +41,17 @@ const Contact = () => {
               </div>
               <div className="form-row">
                 <label htmlFor="message">message</label>
-                <textarea name="message" id="message" cols="30" rows="10" />
+                <textarea name="message" id="message"></textarea>
               </div>
               <button type="submit" className="btn block">
                 submit
               </button>
             </form>
           </article>
+        </section>
+        <section className="featured-recipes">
+          <h5>Look at these!</h5>
+          <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>

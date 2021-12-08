@@ -10,9 +10,9 @@
     "dedupe": "npm dedupe",
     "develop": "gatsby develop",
     "lint": "npx prettier --write .",
+    "nuke": "gatsby clean && npm prune && npm dedupe && npm install && npm run lint",
     "prune": "npm prune",
     "serve": "gatsby serve",
-    "start": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
