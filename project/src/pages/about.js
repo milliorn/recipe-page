@@ -14,22 +14,15 @@ const About = ({
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <h2>Lorem ipsum dolor sit amet elit.</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis assumed voluptatibus est vel reprehenderit sed aut
-              harum, non ut. Nisi nullo blanditiis dolor minima excepturi
-              aliquam volute expedita voluptatum veritatis.
+              Taxidermy forage glossier letterpress heirloom before they sold
+              out you probably haven't heard of them banc mi biddies chia.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus fugit voluptatem, event at qui illo. Nobis sed
-              atque reprehenderit provident illum deceit, new uint enim dolorum
-              voluptatem ut. Ab, error distinctio!
+              Teriyaki tumblr fruitarian jean shorts brunch, aesthetic salvia
+              retro.
             </p>
-            <Link to="/contact" className="btn">
-              contact
-            </Link>
           </article>
           <StaticImage
             src="../assets/images/about.jpeg"

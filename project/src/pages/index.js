@@ -11,13 +11,13 @@ export default function Home() {
           <StaticImage
             src="../assets/images/main.jpeg"
             alt="eggs"
-            className='"hero-img'
+            className="hero-img"
             placeholder="tracedSVG"
             layout="fullWidth"
-          />
+          ></StaticImage>
           <div className="hero-container">
             <div className="hero-text">
-              <h1>React Recipes</h1>
+              <h1>React recipes</h1>
               <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
             </div>
           </div>
