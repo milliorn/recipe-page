@@ -1,7 +1,7 @@
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
-import React from "react"
-import slugify from "slugify"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+import React from 'react'
+import slugify from 'slugify'
 
 const RecipesList = ({ recipes = [] }) => {
   return (

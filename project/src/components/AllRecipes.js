@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import RecipesList from "./RecipesList"
-import TagsList from "./TagsList"
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import RecipesList from './RecipesList'
+import TagsList from './TagsList'
 
 const query = graphql`
   {

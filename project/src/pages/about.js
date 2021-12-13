@@ -1,14 +1,14 @@
-import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import Layout from "../components/Layout"
-import React from "react"
-import RecipesList from "../components/RecipesList"
-import SEO from "../components/SEO"
+import { Link, graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import Layout from '../components/Layout'
+import React from 'react'
+import RecipesList from '../components/RecipesList'
+import SEO from '../components/SEO'
 
 const About = ({
   data: {
-    allContentfulRecipe: { nodes: recipes },
-  },
+    allContentfulRecipe: { nodes: recipes }
+  }
 }) => {
   return (
     <Layout>
@@ -25,7 +25,6 @@ const About = ({
               Teriyaki tumblr fruitarian jean shorts brunch, aesthetic salvia
               retro.
             </p>
-
           </article>
           <StaticImage
             src="../assets/images/about.jpeg"

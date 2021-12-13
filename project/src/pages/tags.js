@@ -1,9 +1,9 @@
-import { graphql, Link } from "gatsby"
-import Layout from "../components/Layout"
-import React from "react"
-import SEO from "../components/SEO"
-import setupTags from "../utils/setupTags"
-import slugify from "slugify"
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import React from 'react'
+import SEO from '../components/SEO'
+import setupTags from '../utils/setupTags'
+import slugify from 'slugify'
 
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
