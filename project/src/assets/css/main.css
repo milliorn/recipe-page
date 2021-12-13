@@ -11,7 +11,6 @@
 
   /* COLORS */
 
-
   /* primary */
 
 	--primary-0: #f0efff;
@@ -46,7 +45,6 @@
 	--grey-900: #51545a;
 	--grey-1000: #333538;
 	--grey-1100: #141516;
-
 
   /* rest */
 
@@ -261,7 +259,6 @@ button.block {
 	width: 100%;
 }
 
-
 /* Basic Classes */
 
 .alert {
@@ -317,7 +314,6 @@ form > *:last-child {
 	margin-bottom: 0;
 }
 
-
 /* loading */
 
 @keyframes spinner {
@@ -340,7 +336,6 @@ form > *:last-child {
 }
 
 /* form loading */
-
 
 .form-loading {
 	position: relative;
@@ -376,25 +371,10 @@ form > *:last-child {
 	animation: spinner 0.6s linear infinite;
 }
 
-
-/*#########*/
-
-       
 /* END OF GLOBALS */
-      
-       
-        /*#########*/
-      
 
-        
-/*#########*/
-
-       
 /* Navbar */
-      
-       
-        /*#########*/
-      
+
 .navbar {
 	display: flex;
 	align-items: center;
@@ -501,15 +481,8 @@ form > *:last-child {
 	}
 }
 
-
-/*#########*/
-
-       
 /* Footer */
-      
-       
-        /*#########*/
-      
+
 .page-footer {
 	text-align: center;
 	height: 4rem;
@@ -533,15 +506,8 @@ form > *:last-child {
 	color: var(--primary-500);
 }
 
-
-/*#########*/
-
-       
 /* Error */
-      
-       
-        /*#########*/
-      
+
 .error-page {
 	min-height: calc(100vh - (6rem + 4rem));
 	text-align: center;
@@ -553,14 +519,7 @@ form > *:last-child {
 }
 
 
-/*#########*/
-
-       
 /* Contact */
-      
-       
-        /*#########*/
-      
 
 .contact-page {
 	display: grid;
@@ -574,15 +533,7 @@ form > *:last-child {
 	}
 }
 
-
-/*#########*/
-
-       
 /* About */
-      
-       
-        /*#########*/
-      
 
 .about-page h2 {
 	text-transform: none;
@@ -616,14 +567,7 @@ form > *:last-child {
 	max-width: 100%;
 }
 
-/*#########*/
-
-       
 /* Hero */
-      
-       
-        /*#########*/
-      
 
 .hero-img {
 	height: 100%;
@@ -661,15 +605,8 @@ form > *:last-child {
 	}
 }
 
-
-/*#########*/
-
-       
 /* Recipes */
-      
-       
-        /*#########*/
-      
+
 .recipes-container {
 	display: grid;
 	gap: 2rem 1rem;
@@ -685,9 +622,6 @@ form > *:last-child {
 	order: 1;
 	display: flex;
 	flex-direction: column;
-
-  /* background: blue; */
-
 }
 
 .tags-list {
@@ -761,11 +695,9 @@ form > *:last-child {
 		font-size: 0.85rem;
 	}
 	.tags-container {
-		order: 0;
-	
-    /* background: blue; */
-  
+		order: 0;  
 	}
+
 	.tags-list {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -781,14 +713,7 @@ form > *:last-child {
 	}
 }
 
-/*#########*/
-
-       
 /* Tags */
-      
-       
-        /*#########*/
-      
 
 .tags-page {
 	display: grid;
@@ -828,15 +753,7 @@ form > *:last-child {
 	}
 }
 
-
-/*#########*/
-
-       
 /* Recipe Template */
-      
-       
-        /*#########*/
-      
 
 .recipe-hero {
 	display: grid;
