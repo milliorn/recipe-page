@@ -33,7 +33,7 @@
     "react-helmet": "6.1.0",
     "react-icons": "4.3.1",
     "sharp": "0.29.3",
-    "slugify": "1.6.2",
+    "slugify": "1.6.3",
     "styled-components": "5.3.3"
   },
   "devDependencies": {
