@@ -7,4 +7,5 @@
 [![DeepSource](https://deepsource.io/gh/milliorn/Sample-Gatsby-Recipe-Page.svg/?label=active+issues&show_trend=true&token=t33AZyiarRHg1JeA4jLiGRpY)](https://deepsource.io/gh/milliorn/Sample-Gatsby-Recipe-Page/?ref=repository-badge)
 [![DevSkim](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/devskim-analysis.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/devskim-analysis.yml)
 [![Lint Code Base](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/super-linter.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/super-linter.yml)
+[![njsscan sarif](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/njsscan-analysis.yml)
 [![OSSAR](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/ossar-analysis.yml)
