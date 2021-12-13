@@ -1,10 +1,10 @@
-import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/Layout"
-import React from "react"
-import SEO from "../components/SEO"
-import slugify from "slugify"
+import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import React from 'react'
+import SEO from '../components/SEO'
+import slugify from 'slugify'
 
 const RecipeTemplate = ({ data }) => {
   const {
@@ -14,7 +14,7 @@ const RecipeTemplate = ({ data }) => {
     prepTime,
     servings,
     description: { description },
-    image,
+    image
   } = data.contentfulRecipe
   const pathToImage = getImage(image)
   const { tags, instructions, ingredients, tools } = content
@@ -23,7 +23,6 @@ const RecipeTemplate = ({ data }) => {
       <SEO title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
-
           <section className="recipe-hero">
             <GatsbyImage
               image={pathToImage}

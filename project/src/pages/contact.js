@@ -1,8 +1,8 @@
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import React from "react"
-import RecipesList from "../components/RecipesList"
-import SEO from "../components/SEO"
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import React from 'react'
+import RecipesList from '../components/RecipesList'
+import SEO from '../components/SEO'
 
 const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
