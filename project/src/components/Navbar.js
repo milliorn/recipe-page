@@ -1,7 +1,7 @@
-import { FiAlignJustify } from 'react-icons/fi'
-import { Link } from 'gatsby'
-import logo from '../assets/images/logo.svg'
-import React, { useState } from 'react'
+import { FiAlignJustify } from "react-icons/fi"
+import { Link } from "gatsby"
+import logo from "../assets/images/logo.svg"
+import React, { useState } from "react"
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -16,7 +16,7 @@ const Navbar = () => {
             <FiAlignJustify />
           </button>
         </div>
-        <div className={show ? 'nav-links show-links' : 'nav-links'}>
+        <div className={show ? "nav-links show-links" : "nav-links"}>
           <Link
             to="/"
             className="nav-link"
@@ -50,7 +50,7 @@ const Navbar = () => {
             about
           </Link>
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn">
+            <Link to="/contact" className="btn" onClick={() => setShow(false)}>
               contact
             </Link>
           </div>

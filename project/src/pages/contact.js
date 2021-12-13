@@ -1,12 +1,14 @@
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import React from 'react'
-import RecipesList from '../components/RecipesList'
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
+import React from "react"
+import RecipesList from "../components/RecipesList"
+import SEO from "../components/SEO"
 
 const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <SEO title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
@@ -50,7 +52,7 @@ const Contact = ({ data }) => {
           </article>
         </section>
         <section className="featured-recipes">
-          <h5>Look at these!</h5>
+          <h5>Look at this!</h5>
           <RecipesList recipes={recipes} />
         </section>
       </main>

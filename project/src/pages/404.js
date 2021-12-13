@@ -1,9 +1,11 @@
-import Layout from '../components/Layout'
-import React from 'react'
+import Layout from "../components/Layout"
+import React from "react"
+import SEO from "../components/SEO"
 
-const PageNotFound = () => {
+const Error = () => {
   return (
     <Layout>
+      <SEO title="Error" />
       <main className="error-page">
         <section>
           <h1>404</h1>
@@ -14,4 +16,4 @@ const PageNotFound = () => {
   )
 }
 
-export default PageNotFound
+export default Error
