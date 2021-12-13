@@ -1,9 +1,9 @@
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import React from 'react'
 import RecipesList from '../components/RecipesList'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
 const About = ({
   data: {
@@ -12,7 +12,7 @@ const About = ({
 }) => {
   return (
     <Layout>
-      <SEO title="About" />
+      <Seo title="About" />
       <main className="page">
         <section className="about-page">
           <article>
