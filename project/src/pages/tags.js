@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
-import Seo from '../components/Seo'
+import SEO from '../components/SEO'
 import setupTags from '../utils/setupTags'
 import slugify from 'slugify'
 
@@ -9,7 +9,7 @@ const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
   return (
     <Layout>
-      <Seo title="Tags" />
+      <SEO title="Tags" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {

@@ -2,12 +2,12 @@ import { StaticImage } from 'gatsby-plugin-image'
 import AllRecipes from '../components/AllRecipes'
 import Layout from '../components/Layout'
 import React from 'react'
-import Seo from '../components/Seo'
+import SEO from '../components/SEO'
 
 export default function Home() {
   return (
     <Layout>
-      <Seo title="Home " />
+      <SEO title="Home " />
       <main className="page">
         <header className="hero">
           <StaticImage
