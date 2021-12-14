@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import React from 'react'
 import RecipesList from '../components/RecipesList'
-import Seo from '../components/Seo'
+import SiteSeo from '../components/SiteSeo'
 
 const About = ({
   data: {
@@ -12,7 +12,7 @@ const About = ({
 }) => {
   return (
     <Layout>
-      <Seo title="About" />
+      <SiteSeo title="About" />
       <main className="page">
         <section className="about-page">
           <article>

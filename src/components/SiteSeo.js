@@ -13,7 +13,8 @@ const query = graphql`
   }
 `
 
-const Seo = ({ title, description }) => {
+/*Setup SiteSeo with graphql/site/siteMetadata*/
+const SiteSeo = ({ title, description }) => {
   const { site } = useStaticQuery(query)
   const metaDescription = description || site.siteMetadata.description
   return (
@@ -25,4 +26,4 @@ const Seo = ({ title, description }) => {
   )
 }
 
-export default Seo
+export default SiteSeo

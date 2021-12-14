@@ -2,13 +2,13 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
 import RecipesList from '../components/RecipesList'
-import Seo from '../components/Seo'
+import SiteSeo from '../components/SiteSeo'
 
 const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
-      <Seo title="Contact" />
+      <SiteSeo title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">

@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
-import Seo from '../components/Seo'
+import SiteSeo from '../components/SiteSeo'
 import slugify from 'slugify'
 
 const RecipeTemplate = ({ data }) => {
@@ -20,7 +20,7 @@ const RecipeTemplate = ({ data }) => {
   const { tags, instructions, ingredients, tools } = content
   return (
     <Layout>
-      <Seo title={title} description={description} />
+      <SiteSeo title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">

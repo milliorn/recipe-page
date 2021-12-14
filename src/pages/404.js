@@ -1,11 +1,11 @@
 import Layout from '../components/Layout'
 import React from 'react'
-import Seo from '../components/Seo'
+import SiteSeo from '../components/SiteSeo'
 
 const Error = () => {
   return (
     <Layout>
-      <Seo title="Error" />
+      <SiteSeo title="Error" />
       <main className="error-page">
         <section>
           <h1>404</h1>
