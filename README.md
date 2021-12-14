@@ -2,6 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1b8c3ee1-6f20-4cd9-a199-2e7fbd02e1a3/deploy-status)](https://app.netlify.com/sites/sample-gatsby-recipe-page/deploys)
 [![Broken link check](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/links.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/links.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/milliorn/sample-gatsby-recipe-page/badge)](https://www.codefactor.io/repository/github/milliorn/sample-gatsby-recipe-page)
 [![Check Markdown links](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/markdown-link-check.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/markdown-link-check.yml)
 [![Codacy](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/codacy-analysis.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/codacy-analysis.yml)
 [![CodeQL](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/milliorn/Sample-Gatsby-Recipe-Page/actions/workflows/codeql-analysis.yml)
