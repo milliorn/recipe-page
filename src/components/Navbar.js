@@ -13,7 +13,11 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="simply recipes" />
           </Link>
-          <button className="nav-btn" onClick={() => setShow(!show)}>
+          <button
+            className="nav-btn"
+            type="submit"
+            onClick={() => setShow(!show)}
+          >
             <FiAlignJustify />
           </button>
         </div>
