@@ -31,8 +31,13 @@ const Contact = ({ data }) => {
               consequuntur dolorum accusantium eaque.
             </p>
           </article>
+
           <article>
-            <form className="form contact-form">
+            <form
+              className="form contact-form"
+              action="https://formspree.io/f/mknynvnd"
+              method="POST"
+            >
               <div className="form-row">
                 <label htmlFor="name">your name</label>
                 <input type="text" name="name" id="name" />
@@ -51,6 +56,7 @@ const Contact = ({ data }) => {
             </form>
           </article>
         </section>
+
         <section className="featured-recipes">
           <h5>Look at this!</h5>
           <RecipesList recipes={recipes} />
