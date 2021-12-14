@@ -4,6 +4,7 @@ import React from 'react'
 import RecipesList from '../components/RecipesList'
 import SiteSeo from '../components/SiteSeo'
 
+/* Setup contact page and form */
 const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (

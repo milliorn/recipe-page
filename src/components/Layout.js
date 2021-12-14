@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import React from 'react'
 
+/* Setup navbar for every page */
 const Layout = ({ children }) => {
   return (
     <>

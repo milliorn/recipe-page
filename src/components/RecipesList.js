@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import slugify from 'slugify'
 
+/* Setup component for recipes */
 const RecipesList = ({ recipes = [] }) => {
   return (
     <div className="recipes-list">

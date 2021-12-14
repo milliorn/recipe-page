@@ -4,6 +4,7 @@ import React from 'react'
 import RecipesList from '../components/RecipesList'
 import SiteSeo from '../components/SiteSeo'
 
+/* Setup boilerplate code for tags to display on page */
 const TagTemplate = ({ data, pageContext }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (

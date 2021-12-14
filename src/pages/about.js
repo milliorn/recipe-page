@@ -5,6 +5,7 @@ import React from 'react'
 import RecipesList from '../components/RecipesList'
 import SiteSeo from '../components/SiteSeo'
 
+/* Setup about page */
 const About = ({
   data: {
     allContentfulRecipe: { nodes: recipes }

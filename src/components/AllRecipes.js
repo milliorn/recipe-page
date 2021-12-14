@@ -22,6 +22,7 @@ const query = graphql`
   }
 `
 
+/* Setup recipes for every page */
 const AllRecipes = () => {
   const data = useStaticQuery(query)
   const recipes = data.allContentfulRecipe.nodes

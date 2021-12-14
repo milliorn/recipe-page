@@ -5,6 +5,7 @@ import SiteSeo from '../components/SiteSeo'
 import setupTags from '../utils/setupTags'
 import slugify from 'slugify'
 
+/* Setup tags page */
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
   return (

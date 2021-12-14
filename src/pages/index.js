@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import React from 'react'
 import SiteSeo from '../components/SiteSeo'
 
+/* Setup home page */
 export default function Home() {
   return (
     <Layout>

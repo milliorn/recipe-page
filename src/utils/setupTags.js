@@ -1,3 +1,4 @@
+/* Gather all tags to be consumed */
 const setupTags = recipes => {
   const allTags = {}
 

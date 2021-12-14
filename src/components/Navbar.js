@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import logo from '../assets/images/logo.svg'
 import React, { useState } from 'react'
 
+/* Setup navbar for every page */
 const Navbar = () => {
   const [show, setShow] = useState(false)
   return (

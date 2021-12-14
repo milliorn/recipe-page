@@ -6,6 +6,7 @@ import React from 'react'
 import SiteSeo from '../components/SiteSeo'
 import slugify from 'slugify'
 
+/* Boilerplate code to programmatically produce a template for all recipe pages */
 const RecipeTemplate = ({ data }) => {
   const {
     title,
