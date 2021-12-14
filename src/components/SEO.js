@@ -21,7 +21,7 @@ const Seo = ({ title, description }) => {
       htmlAttributes={{ lang: 'en' }}
       title={`${title} | ${site.siteMetadata.title}`}
       meta={[{ name: `description`, content: metaDescription }]}
-    ></Helmet>
+    />
   )
 }
 
