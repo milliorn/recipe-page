@@ -1,6 +1,4 @@
 /**
- * Configure your Gatsby site with this file.
- *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 require('dotenv').config({
@@ -18,6 +16,7 @@ module.exports = {
     title: `Gatsby Recipes`
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
