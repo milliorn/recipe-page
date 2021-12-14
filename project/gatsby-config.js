@@ -31,7 +31,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `/project/static/favicon.ico`,
+        icon: `static/favicon-3.png`,
         crossOrigin: `use-credentials` // `use-credentials` or `anonymous`
       }
     },
