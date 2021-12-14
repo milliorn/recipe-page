@@ -23,6 +23,19 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Recipes`,
+        short_name: `Gatsby Recipes`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `/project/static/favicon.ico`,
+        crossOrigin: `use-credentials` // `use-credentials` or `anonymous`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
