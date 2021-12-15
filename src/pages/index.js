@@ -10,19 +10,17 @@ import SiteSeo from '../components/SiteSeo'
 export default function Home() {
   const [comments, setComments] = useState([])
 
-  useEffect(() => {
-    fetchComments()
-  }, [])
-
-  /*
-  https://www.pluralsight.com/guides/process-an-api-response-in-react
-*/
+  /*https://www.pluralsight.com/guides/process-an-api-response-in-react*/
   const fetchComments = async () => {
     const response = await Axios(
       'https://my-bao-server.herokuapp.com/api/breadpuns'
     )
     setComments(response.data)
   }
+
+  useEffect(() => {
+    fetchComments()
+  }, [])
 
   return (
     <Layout>
