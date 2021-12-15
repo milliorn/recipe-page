@@ -5,10 +5,7 @@ import Layout from '../components/Layout'
 import React, { useEffect, useState } from 'react'
 import SiteSeo from '../components/SiteSeo'
 
-/* 
-Setup home page 
-https://www.pluralsight.com/guides/process-an-api-response-in-react
-*/
+/* Setup home page */
 export default function Home() {
   const [comments, setComments] = useState([])
 
@@ -16,6 +13,9 @@ export default function Home() {
     fetchComments()
   }, [])
 
+  /*
+  https://www.pluralsight.com/guides/process-an-api-response-in-react
+*/
   const fetchComments = async () => {
     const response = await Axios(
       'https://my-bao-server.herokuapp.com/api/breadpuns'
