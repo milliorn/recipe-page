@@ -1,14 +1,12 @@
-import { StaticImage } from 'gatsby-plugin-image'
-import AllRecipes from '../components/AllRecipes'
 import Axios from 'axios'
-import Layout from '../components/Layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
+
+import AllRecipes from '../components/AllRecipes'
+import Layout from '../components/Layout'
 import SiteSeo from '../components/SiteSeo'
 
-/* 
-Setup home page 
-https://www.pluralsight.com/guides/process-an-api-response-in-react
-*/
+/* Setup home page */
 export default function Home() {
   const [comments, setComments] = useState([])
 
@@ -16,6 +14,9 @@ export default function Home() {
     fetchComments()
   }, [])
 
+  /*
+  https://www.pluralsight.com/guides/process-an-api-response-in-react
+*/
   const fetchComments = async () => {
     const response = await Axios(
       'https://my-bao-server.herokuapp.com/api/breadpuns'
