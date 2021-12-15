@@ -88,7 +88,11 @@ const RecipeTemplate = ({ data }) => {
                 {ingredients.map((item, index) => {
                   return (
                     <p key={index} className="single-ingredient">
-                      {item}
+                      {item
+                        .toLowerCase()
+                        .split(' ')
+                        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                        .join(' ')}
                     </p>
                   )
                 })}
