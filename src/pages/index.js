@@ -1,8 +1,9 @@
-import { StaticImage } from 'gatsby-plugin-image'
-import AllRecipes from '../components/AllRecipes'
 import Axios from 'axios'
-import Layout from '../components/Layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
+
+import AllRecipes from '../components/AllRecipes'
+import Layout from '../components/Layout'
 import SiteSeo from '../components/SiteSeo'
 
 /* Setup home page */
