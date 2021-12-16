@@ -533,7 +533,7 @@ form > *:last-child {
 
 .about-page h2 {
   font-weight: bold;
-  text-transform: none;
+  text-transform: capitalize;
 }
 
 .about-page {

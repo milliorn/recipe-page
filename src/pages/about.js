@@ -17,14 +17,14 @@ const About = ({
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>Lorem ipsum dolor sit amet elit.</h2>
+            <h2>My personal recipes</h2>
             <p>
-              Taxidermy forage glossier letterpress heirloom before they sold
-              out you probably haven't heard of them banc mi biddies chia.
+              Although this ia mock website to demonstrate what I can do in
+              GatsbyJS and React, these are real recipes I personally.
             </p>
             <p>
-              Teriyaki tumblr fruitarian jean shorts brunch, aesthetic salvia
-              retro.
+              Hope you enjoy them. If you have any you would like to add click
+              on the contact button and send me your recipe!
             </p>
           </article>
           <StaticImage
@@ -35,7 +35,7 @@ const About = ({
           />
         </section>
         <section className="featured-recipes">
-          <h5>Look at this!</h5>
+          <h5>Look at these!</h5>
           <RecipesList recipes={recipes} />
         </section>
       </main>
