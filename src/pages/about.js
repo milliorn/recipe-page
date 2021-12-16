@@ -19,10 +19,12 @@ const About = ({
           <article>
             <h2>My personal recipes</h2>
             <p>
-              Although this ia mock website to demonstrate what I can do in GatsbyJS and React, these are real recipes I personally.
+              Although this ia mock website to demonstrate what I can do in
+              GatsbyJS and React, these are real recipes I personally.
             </p>
             <p>
-              Hope you enjoy them. If you have any you would like to add click on the contact button and send me your recipe!
+              Hope you enjoy them. If you have any you would like to add click
+              on the contact button and send me your recipe!
             </p>
           </article>
           <StaticImage
