@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
+/* Generate a random quote via api pull */
 const RandomQuote = () => {
   const [comments, setComments] = useState([])
 
