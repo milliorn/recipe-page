@@ -20,7 +20,7 @@ const About = ({
             <h2>My personal recipes</h2>
             <p>
               Although this ia mock website to demonstrate what I can do in
-              GatsbyJS and React, these are real recipes I personally.
+              GatsbyJS and React, these are real recipes I personally use.
             </p>
             <p>
               Hope you enjoy them. If you have any you would like to add click
