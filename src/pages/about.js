@@ -1,5 +1,5 @@
-import {graphql} from 'gatsby'
-import {StaticImage} from 'gatsby-plugin-image'
+import { graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import Layout from '../components/Layout'
@@ -7,8 +7,11 @@ import RecipesList from '../components/RecipesList'
 import SiteSeo from '../components/SiteSeo'
 
 /* Setup about page */
-const About =
-    ({data : {allContentfulRecipe : {nodes : recipes}}}) => {
+const About = ({
+  data: {
+    allContentfulRecipe: { nodes: recipes }
+  }
+}) => {
   return (
     <Layout>
       <SiteSeo title="About" />
@@ -22,24 +25,24 @@ const About =
             </p>
             <p>
               Hope you enjoy them. If you have any you would like to add click
-  on the contact button and send me your recipe!</p>
-          </article><
-      StaticImage
-  src = "../assets/images/about.jpeg"
-  alt = "Person Pouring Salt in Bowl"
-  className = "about-img"
+              on the contact button and send me your recipe!
+            </p>
+          </article>
+          <StaticImage
+            src="../assets/images/about.jpeg"
+            alt="Person Pouring Salt in Bowl"
+            className="about-img"
             placeholder="blurred"
           />
         </section>
         <section className="featured-recipes">
           <h5>Look at these!</h5>
-          <RecipesList recipes={
-    recipes} />
+          <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>
   )
-    }
+}
 
 export const query = graphql`
   {

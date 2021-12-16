@@ -1,4 +1,4 @@
-import {StaticImage} from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import AllRecipes from '../components/AllRecipes'
@@ -14,10 +14,10 @@ export default function Home() {
       <main className="page">
         <header className="hero">
           <StaticImage
-  src = "../assets/images/main.jpeg"
-  alt = "eggs"
-  className = "hero-img"
-  placeholder = "tracedSVG"
+            src="../assets/images/main.jpeg"
+            alt="eggs"
+            className="hero-img"
+            placeholder="tracedSVG"
             layout="fullWidth"
           />
           <div className="hero-container">
