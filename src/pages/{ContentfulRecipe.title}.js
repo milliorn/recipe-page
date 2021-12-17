@@ -54,7 +54,7 @@ const RecipeTemplate = ({ data }) => {
 
               <p className="recipe-tags">
                 Tags :
-                {tags.map((tag, index) => {
+                {tags.sort().map((tag, index) => {
                   const slug = slugify(tag, { lower: true })
 
                   return (
@@ -99,7 +99,7 @@ const RecipeTemplate = ({ data }) => {
               </div>
               <div>
                 <h4>tools</h4>
-                {tools.map((item, index) => {
+                {tools.sort().map((item, index) => {
                   return (
                     <p key={index} className="single-tool">
                       {item}
