@@ -1,4 +1,4 @@
-# Sample-Gatsby-Recipe-Page
+# Gatsby-Recipe-Page
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1b8c3ee1-6f20-4cd9-a199-2e7fbd02e1a3/deploy-status)](https://app.netlify.com/sites/sample-gatsby-recipe-page/deploys)
 [![CodeFactor](https://www.codefactor.io/repository/github/milliorn/sample-gatsby-recipe-page/badge)](https://www.codefactor.io/repository/github/milliorn/sample-gatsby-recipe-page)
