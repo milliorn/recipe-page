@@ -16,7 +16,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "axios": "0.26.1",
+    "axios": "0.27.2",
     "babel-plugin-styled-components": "2.0.7",
     "gatsby": "4.13.1",
     "gatsby-plugin-gatsby-cloud": "4.13.0",
