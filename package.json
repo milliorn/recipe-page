@@ -35,7 +35,7 @@
     "react-helmet": "6.1.0",
     "react-icons": "4.4.0",
     "slugify": "1.6.5",
-    "styled-components": "5.3.5"
+    "styled-components": "5.3.6"
   },
   "devDependencies": {
     "prettier": "2.7.1"
