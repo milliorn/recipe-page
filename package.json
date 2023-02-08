@@ -38,7 +38,7 @@
     "styled-components": "5.3.6"
   },
   "devDependencies": {
-    "prettier": "2.8.3"
+    "prettier": "2.8.4"
   },
   "repository": {
     "type": "git",
