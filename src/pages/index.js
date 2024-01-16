@@ -22,7 +22,7 @@ export default function Home() {
           <div className="hero-container">
             <div className="hero-text">
               <h1>React recipes</h1>
-              <RandomQuote />
+              {/* <RandomQuote /> */}
             </div>
           </div>
         </header>

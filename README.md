@@ -48,4 +48,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For any questions or inquiries, please reach out to the project owner [@milliorn](https://github.com/milliorn).
-

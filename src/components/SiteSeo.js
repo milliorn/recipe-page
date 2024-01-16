@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import React from 'react'
 
@@ -17,12 +16,16 @@ const query = graphql`
 const SiteSeo = ({ title, description }) => {
   const { site } = useStaticQuery(query)
   const metaDescription = description || site.siteMetadata.description
+  const fullTitle = title
+    ? `${title} | ${site.siteMetadata.title}`
+    : site.siteMetadata.title
+
   return (
-    <Helmet
-      htmlAttributes={{ lang: 'en' }}
-      title={`${title} | ${site.siteMetadata.title}`}
-      meta={[{ name: `description`, content: metaDescription }]}
-    />
+    <>
+      <html lang="en" />
+      <title>{fullTitle}</title>
+      <meta name="description" content={metaDescription} />
+    </>
   )
 }
 
