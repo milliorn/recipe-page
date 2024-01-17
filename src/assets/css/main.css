@@ -18,7 +18,7 @@
 
   /* main */
 
-  --primary-500: #645cff;
+  --primary-500: #4338ca;
   --primary-600: #554ed9;
   --primary-700: #4640b3;
   --primary-800: #37338c;
@@ -499,7 +499,8 @@ form > *:last-child {
 
 .page-footer span,
 .page-footer a {
-  color: var(--primary-500);
+  color: var(--primary-300);
+  font-weight: 600;
 }
 
 /* Error */
