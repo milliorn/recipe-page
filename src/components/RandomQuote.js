@@ -3,13 +3,11 @@ import React, { useEffect, useState } from 'react'
 
 /* Generate a random quote via api pull */
 const RandomQuote = () => {
-  const [ comments, setComments ] = useState([])
+  const [comments, setComments] = useState([])
 
   /*https://www.pluralsight.com/guides/process-an-api-response-in-react*/
   const fetchComments = async () => {
-    const response = await Axios(
-      ''
-    )
+    const response = await Axios('')
     setComments(response.data)
   }
 

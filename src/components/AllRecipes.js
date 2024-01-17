@@ -5,7 +5,7 @@ import TagsList from './TagsList'
 
 const query = graphql`
   {
-    allContentfulRecipe(sort: { fields: title, order: ASC }) {
+    allContentfulRecipe(sort: { title: ASC }) {
       nodes {
         id
         title

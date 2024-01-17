@@ -46,7 +46,7 @@ const About = ({
 export const query = graphql`
   {
     allContentfulRecipe(
-      sort: { fields: title, order: ASC }
+      sort: { title: ASC }
       filter: { featured: { eq: true } }
     ) {
       nodes {
