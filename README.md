@@ -18,7 +18,7 @@ Recipe-Page is a web application built with React that allows users to discover 
 
 To get started with Recipe-Page, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/milliorn/Recipe-Page.git`
+1. Clone the repository: `git clone https://github.com/milliorn/recipe-page.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 4. Open your browser and visit: `http://localhost:3000`
