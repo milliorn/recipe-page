@@ -13,9 +13,9 @@ module.exports = {
     author: 'Scott Milliorn',
     creationDate: new Date(2021, 10, 16),
     description: `Blazing fast modern recipe site in GatsbyJS`,
-    title: 'Simply Recipes',
     github: 'https://github.com/milliorn/recipe-page',
-    siteUrl: `https://gatsbyrecipes.gatsbyjs.io/`
+    siteUrl: `https://milliorn-recipes.netlify.app/`,
+    title: 'Simply Recipes',
   },
   plugins: [
     `gatsby-plugin-image`,

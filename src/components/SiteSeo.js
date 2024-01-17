@@ -21,10 +21,10 @@ const SiteSeo = ({ title, description }) => {
     : site.siteMetadata.title
 
   return (
-    <>
+    <head>
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
-    </>
+    </head>
   )
 }
 
