@@ -1,6 +1,6 @@
 {
   "description": "Recipes Website in Gatsby",
-  "license": "0BSD",
+  "license": "MIT",
   "name": "gatsby-recipe-page",
   "private": true,
   "version": "0.1.0",
