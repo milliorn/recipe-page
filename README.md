@@ -1,5 +1,7 @@
 # Gatsby-Recipe-Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9bf881c3-ed74-4916-af84-b5396ebb07cc/deploy-status)](https://app.netlify.com/sites/milliorn-recipes/deploys)
+
 Recipe website in React
 
 ## Introduction
