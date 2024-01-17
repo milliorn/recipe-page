@@ -21,6 +21,13 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     {
+      // https://www.gatsbyjs.com/plugins/gatsby-plugin-html-attributes/
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -42,11 +49,11 @@ module.exports = {
           google: [
             {
               family: 'Montserrat',
-              variants: ['400']
+              variants: [ '400' ]
             },
             {
               family: 'Inconsolata',
-              variants: ['400', '500', '600', '700']
+              variants: [ '400', '500', '600', '700' ]
             }
           ]
         }

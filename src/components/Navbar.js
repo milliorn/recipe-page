@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 /* Setup navbar for every page */
 const Navbar = () => {
-  const [show, setShow] = useState(false)
+  const [ show, setShow ] = useState(false)
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -14,6 +14,7 @@ const Navbar = () => {
             <img src={logo} alt="simply recipes" />
           </Link>
           <button
+            aria-label='menu button'
             className="nav-btn"
             type="submit"
             onClick={() => setShow(!show)}
