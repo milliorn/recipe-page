@@ -32,7 +32,7 @@ export const query = graphql`
         cookTime
         prepTime
         image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
         }
       }
     }
