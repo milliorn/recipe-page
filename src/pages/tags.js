@@ -14,13 +14,13 @@ const Tags = ({ data }) => {
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {
-            const [text, value] = tag
+            const [ text, value ] = tag
             const slug = slugify(text, { lower: true })
 
             return (
               <Link to={`/tags/${slug}`} key={index} className="tag">
-                <h5>{text}</h5>
-                <p>{value} recipe</p>
+                <p>{text.toUpperCase()}</p>
+                <p>{value} {value === 0 || value === 1 ? 'Recipe' : 'Recipes'}</p>
               </Link>
             )
           })}

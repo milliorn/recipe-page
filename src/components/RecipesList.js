@@ -18,7 +18,7 @@ const RecipesList = ({ recipes = [] }) => {
               className="recipe-img"
               alt={title}
             />
-            <h5>{title}</h5>
+            <span>{title}</span>
             <p>
               Prep : {prepTime}min | Cook : {cookTime}min
             </p>

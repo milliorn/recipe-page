@@ -7,11 +7,11 @@ import slugify from 'slugify'
 const TagsList = ({ recipes }) => {
   const newTags = setupTags(recipes)
   return (
-    <div className="tag-container">
-      <h4>recipes</h4>
+    <div className="tags-container">
+      <span className='tag-container-span'>Recipes</span>
       <div className="tags-list">
         {newTags.map((tag, index) => {
-          const [text, value] = tag
+          const [ text, value ] = tag
           const slug = slugify(text, { lower: true })
 
           return (
