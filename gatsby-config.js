@@ -1,3 +1,5 @@
+const adapter = require("gatsby-adapter-netlify")
+
 /**
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
@@ -20,6 +22,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    {
+      // https://www.gatsbyjs.com/plugins/gatsby-adapter-netlify/
+      resolve: "gatsby-adapter-netlify",
+      options: {
+        excludeDatastoreFromEngineFunction: true,
+        imageCDN: true,
+      },
+    },
     {
       // https://www.gatsbyjs.com/plugins/gatsby-plugin-html-attributes/
       resolve: 'gatsby-plugin-html-attributes',
