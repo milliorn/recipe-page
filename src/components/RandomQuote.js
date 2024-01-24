@@ -1,20 +1,27 @@
-import Axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import quotesData from '../assets/data/quotes.json' // Adjust the path as needed
 
-/* Generate a random quote via api pull */
 const RandomQuote = () => {
-  const [comments, setComments] = useState([])
-
-  /*https://www.pluralsight.com/guides/process-an-api-response-in-react*/
-  const fetchComments = async () => {
-    const response = await Axios('')
-    setComments(response.data)
-  }
+  const [quote, setQuote] = useState({ author: '', quote: '' })
 
   useEffect(() => {
-    fetchComments()
+    // Function to select a random quote by id
+    const getRandomQuote = () => {
+      const randomIndex = Math.floor(Math.random() * quotesData.quotes.length)
+      return quotesData.quotes[randomIndex]
+    }
+
+    setQuote(getRandomQuote())
   }, [])
-  return <h4>{comments}</h4>
+
+  return (
+    <div className="quote-container">
+      <h4 className="quote-text">
+        {quote.quote}
+        <span className="quote-author"> - {quote.author}</span>
+      </h4>
+    </div>
+  )
 }
 
 export default RandomQuote

@@ -871,3 +871,22 @@ form > *:last-child {
   padding-bottom: 0.75rem;
   text-transform: capitalize;
 }
+
+.quote-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.quote-text {
+  font-size: 0.9rem;
+  margin: 8px;
+}
+
+.quote-author {
+  font-size: 0.75rem;
+}

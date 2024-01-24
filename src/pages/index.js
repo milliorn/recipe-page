@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import AllRecipes from '../components/AllRecipes'
 import Layout from '../components/Layout'
-// import RandomQuote from '../components/RandomQuote'
+import RandomQuote from '../components/RandomQuote'
 import React from 'react'
 import SiteSeo from '../components/SiteSeo'
 
@@ -20,8 +20,7 @@ export default function Home() {
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>React recipes</h1>
-              {/* <RandomQuote /> */}
+              <RandomQuote />
             </div>
           </div>
         </header>

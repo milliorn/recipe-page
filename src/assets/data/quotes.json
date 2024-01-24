@@ -1,0 +1,104 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "author": "Julia Child",
+      "quote": "Cooking is like love. It should be entered into with abandon or not at all."
+    },
+    {
+      "id": 2,
+      "author": "Gordon Ramsay",
+      "quote": "The only time to eat diet food is while you're waiting for the steak to cook."
+    },
+    {
+      "id": 3,
+      "author": "James Beard",
+      "quote": "Good bread is the most fundamentally satisfying of all foods; and good bread with fresh butter, the greatest of feasts."
+    },
+    {
+      "id": 4,
+      "author": "Julie Powell",
+      "quote": "You can't eat just one dumpling. Well, you can, but you may regret it afterward."
+    },
+    {
+      "id": 5,
+      "author": "Paul Prudhomme",
+      "quote": "You don't need a silver fork to eat good food."
+    },
+    {
+      "id": 6,
+      "author": "Anthony Bourdain",
+      "quote": "Your body is not a temple, it's an amusement park. Enjoy the ride."
+    },
+    {
+      "id": 7,
+      "author": "Alice Waters",
+      "quote": "This is the power of gathering: it inspires us, delightfully, to be more hopeful, more joyful, more thoughtful: in a word, more alive."
+    },
+    {
+      "id": 8,
+      "author": "Thomas Keller",
+      "quote": "A recipe has no soul. You, as the cook, must bring soul to the recipe."
+    },
+    {
+      "id": 9,
+      "author": "Julia Child",
+      "quote": "The only real stumbling block is fear of failure. In cooking, you've got to have a what-the-hell attitude."
+    },
+    {
+      "id": 10,
+      "author": "Alton Brown",
+      "quote": "Good food is very often, even most often, simple food."
+    },
+    {
+      "id": 11,
+      "author": "Guy Fieri",
+      "quote": "Cooking is all about people. Food is maybe the only universal thing that really has the power to bring everyone together."
+    },
+    {
+      "id": 12,
+      "author": "Gordon Ramsay",
+      "quote": "Cooking is about passion, so it may look slightly temperamental in a way that it’s too assertive to the naked eye."
+    },
+    {
+      "id": 13,
+      "author": "Nigella Lawson",
+      "quote": "Cooking is actually quite aggressive and controlling and sometimes, yes, there is an element of force-feeding going on."
+    },
+    {
+      "id": 14,
+      "author": "Mario Batali",
+      "quote": "The best way to execute French cooking is to get good and loaded and whack the hell out of a chicken. Bon appétit."
+    },
+    {
+      "id": 15,
+      "author": "Wolfgang Puck",
+      "quote": "I believe that cooking is an art, like painting, or writing a song. Just as there are only so many notes or colors, there are only so many flavors - it's how you combine them that sets you apart."
+    },
+    {
+      "id": 16,
+      "author": "Ina Garten",
+      "quote": "I think that you can make people feel good about themselves, confident and happy, and just feel great about life with good food."
+    },
+    {
+      "id": 17,
+      "author": "Emeril Lagasse",
+      "quote": "I wouldn't want any other job in the world. It's the greatest job there is. You get to play with food all day long."
+    },
+    {
+      "id": 18,
+      "author": "Julia Child",
+      "quote": "I think careful cooking is love, don't you? The loveliest thing you can cook for someone who's close to you is about as nice a valentine as you can give."
+    },
+    {
+      "id": 19,
+      "author": "Ferran Adrià",
+      "quote": "The more you know, the more you realize you know nothing. Every day I learn something new about cooking."
+    },
+    {
+      "id": 20,
+      "author": "Jamie Oliver",
+      "quote": "What's my favorite dish? I'm not going to pick a favorite dish. I'm like a parent. I can't pick a favorite child."
+    }
+  ]
+}
