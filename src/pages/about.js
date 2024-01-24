@@ -13,7 +13,6 @@ const About = ({
 }) => {
   return (
     <Layout>
-      <SiteSeo title="About" />
       <main className="page">
         <section className="about-page">
           <article>
@@ -63,3 +62,5 @@ export const query = graphql`
 `
 
 export default About
+
+export const Head = () => <SiteSeo title="About" />

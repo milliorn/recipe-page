@@ -6,7 +6,6 @@ import SiteSeo from '../components/SiteSeo'
 const Error = () => {
   return (
     <Layout>
-      <SiteSeo title="Error" />
       <main className="error-page">
         <section>
           <h1>404</h1>
@@ -18,3 +17,5 @@ const Error = () => {
 }
 
 export default Error
+
+export const Head = () => <SiteSeo title="Error " />

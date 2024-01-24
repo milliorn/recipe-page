@@ -9,7 +9,6 @@ import SiteSeo from '../components/SiteSeo'
 export default function Home() {
   return (
     <Layout>
-      <SiteSeo title="Home " />
       <main className="page">
         <header className="hero">
           <StaticImage
@@ -31,3 +30,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const Head = () => <SiteSeo title="Home " />

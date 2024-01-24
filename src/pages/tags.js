@@ -10,17 +10,18 @@ const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
   return (
     <Layout>
-      <SiteSeo title="Tags" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {
-            const [ text, value ] = tag
+            const [text, value] = tag
             const slug = slugify(text, { lower: true })
 
             return (
               <Link to={`/tags/${slug}`} key={index} className="tag">
                 <p>{text.toUpperCase()}</p>
-                <p>{value} {value === 0 || value === 1 ? 'Recipe' : 'Recipes'}</p>
+                <p>
+                  {value} {value === 0 || value === 1 ? 'Recipe' : 'Recipes'}
+                </p>
               </Link>
             )
           })}
@@ -43,3 +44,5 @@ export const query = graphql`
 `
 
 export default Tags
+
+export const Head = () => <SiteSeo title="Tags" />

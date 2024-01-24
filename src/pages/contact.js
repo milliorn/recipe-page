@@ -9,7 +9,6 @@ const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
-      <SiteSeo title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
@@ -87,3 +86,5 @@ export const query = graphql`
 `
 
 export default Contact
+
+export const Head = () => <SiteSeo title="Contact " />

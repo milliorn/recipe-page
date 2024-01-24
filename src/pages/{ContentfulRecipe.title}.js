@@ -21,7 +21,6 @@ const RecipeTemplate = ({ data }) => {
   const { tags, instructions, ingredients, tools } = content
   return (
     <Layout>
-      <SiteSeo title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
@@ -139,3 +138,7 @@ export const query = graphql`
 `
 
 export default RecipeTemplate
+
+export const Head = ({ title, description }) => (
+  <SiteSeo title={title} description={description} />
+)

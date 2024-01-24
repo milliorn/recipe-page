@@ -8,10 +8,10 @@ const TagsList = ({ recipes }) => {
   const newTags = setupTags(recipes)
   return (
     <div className="tags-container">
-      <span className='tag-container-span'>Recipes</span>
+      <span className="tag-container-span">Recipes</span>
       <div className="tags-list">
         {newTags.map((tag, index) => {
-          const [ text, value ] = tag
+          const [text, value] = tag
           const slug = slugify(text, { lower: true })
 
           return (

@@ -7,7 +7,6 @@ import SiteSeo from '../components/SiteSeo'
 const Recipes = () => {
   return (
     <Layout>
-      <SiteSeo title="Recipes" />
       <main className="page">
         <AllRecipes />
       </main>
@@ -16,3 +15,5 @@ const Recipes = () => {
 }
 
 export default Recipes
+
+export const Head = () => <SiteSeo title="Recipes" />

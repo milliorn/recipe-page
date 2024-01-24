@@ -1,4 +1,4 @@
-const adapter = require("gatsby-adapter-netlify")
+const adapter = require('gatsby-adapter-netlify')
 
 /**
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
@@ -15,7 +15,7 @@ module.exports = {
     description: `Blazing fast modern recipe site in GatsbyJS`,
     github: 'https://github.com/milliorn/recipe-page',
     siteUrl: `https://milliorn-recipes.netlify.app/`,
-    title: 'Simply Recipes',
+    title: 'Simply Recipes'
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -24,11 +24,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     {
       // https://www.gatsbyjs.com/plugins/gatsby-adapter-netlify/
-      resolve: "gatsby-adapter-netlify",
+      resolve: 'gatsby-adapter-netlify',
       options: {
         excludeDatastoreFromEngineFunction: true,
-        imageCDN: true,
-      },
+        imageCDN: true
+      }
     },
     {
       // https://www.gatsbyjs.com/plugins/gatsby-plugin-html-attributes/
@@ -59,11 +59,11 @@ module.exports = {
           google: [
             {
               family: 'Montserrat',
-              variants: [ '400' ]
+              variants: ['400']
             },
             {
               family: 'Inconsolata',
-              variants: [ '400', '500', '600', '700' ]
+              variants: ['400', '500', '600', '700']
             }
           ]
         }
