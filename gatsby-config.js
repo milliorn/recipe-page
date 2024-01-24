@@ -76,7 +76,7 @@ module.exports = {
         short_name: `Simply Recipes`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `##4338ca`,
+        theme_color: `#4338ca`,
         display: `standalone`,
         icon: `src/assets/images/logo.svg`
       }
