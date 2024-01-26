@@ -742,6 +742,24 @@ form > *:last-child {
   line-height: 1.25rem; /* 20px */
 }
 
+@media only screen and (min-width: 576px) {
+  :root {
+    --defaultFontSize: 100%;
+  }
+
+  .recipes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recipe-img {
+    height: 10rem;
+  }
+
+  .tags-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .quote-text {
     font-size: 1.125rem; /* 18px */
@@ -764,53 +782,14 @@ form > *:last-child {
     font-size: 1.125rem; /* 18px */
     line-height: 1.75rem; /* 28px */
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .quote-text {
-    font-size: 1.5rem; /* 24px */
-    line-height: 2rem; /* 32px */
-  }
-
-  .quote-author {
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .quote-text {
-    font-size: 1.875rem; /* 30px */
-    line-height: 2.25rem; /* 36px */
-  }
-
-  .quote-author {
-    font-size: 1.5rem; /* 24px */
-    line-height: 2rem; /* 32px */
-  }
-}
-
-@media screen and (min-width: 1536px) {
-  .quote-text {
-    font-size: 2.25rem; /* 36px */
-    line-height: 2.5rem; /* 40px */
-  }
-
-  .quote-author {
-    font-size: 1.875rem; /* 30px */
-    line-height: 2.25rem; /* 36px */
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  :root {
-    --defaultFontSize: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
   :root {
     --defaultFontSize: 112.5%;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
   }
 }
 
@@ -854,52 +833,26 @@ form > *:last-child {
     margin-right: 0;
     width: 100%;
   }
-}
 
-@media screen and (min-width: 992px) {
   .about-page {
     align-items: center;
     grid-template-columns: 1fr 1fr;
     height: 400px;
   }
 
-  .about-img {
+  .about-img,
+  .contact-page {
     height: 100%;
   }
-}
 
-@media screen and (min-width: 992px) {
-  .contact-page {
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .hero-text h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .recipes-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .recipe-img {
-    height: 10rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
   .recipes-container {
     gap: 1rem;
     grid-template-columns: 200px 1fr;
   }
 
-  .recipes-list {
-    grid-template-columns: 1fr 1fr;
+  .recipes-list,
+  .tags-page {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .recipe-img {
@@ -918,6 +871,28 @@ form > *:last-child {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .recipe-hero,
+  .recipe-content {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .recipe-hero {
+    align-items: center;
+    grid-template-columns: 4fr 5fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .quote-text {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+  }
+
+  .quote-author {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -926,31 +901,30 @@ form > *:last-child {
   }
 
   .recipes-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
   }
 }
 
-@media screen and (min-width: 576px) {
-  .tags-page {
-    grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 1280px) {
+  .quote-text {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+  }
+
+  .quote-author {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
   }
 }
 
-@media screen and (min-width: 992px) {
-  .tags-page {
-    grid-template-columns: 1fr 1fr 1fr;
+@media screen and (min-width: 1536px) {
+  .quote-text {
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
   }
-}
 
-@media screen and (min-width: 992px) {
-  .recipe-hero {
-    align-items: center;
-    grid-template-columns: 4fr 5fr;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .recipe-content {
-    grid-template-columns: 2fr 1fr;
+  .quote-author {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
   }
 }
