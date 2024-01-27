@@ -15,7 +15,7 @@ const TagTemplate = ({ data, pageContext }) => {
           <RecipesList recipes={recipes} />
         </div>
       </main>
-      <Head pageContext={pageContext} />
+      {/* <Head pageContext={pageContext} /> */}
     </Layout>
   )
 }
@@ -41,6 +41,6 @@ export const query = graphql`
 
 export default TagTemplate
 
-export const Head = ({ pageContext }) => {
-  return <SiteSeo title={pageContext.tag} />
-}
+// export const Head = ({ pageContext }) => {
+//   return <SiteSeo title={pageContext.tag} />
+// }

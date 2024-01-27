@@ -1,23 +1,19 @@
+/* Reset */
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
+/* Root Variables */
 :root {
-  /* COLORS */
-
-  /* primary */
-
+  /* Color Palette */
   --primary-0: #f0efff;
   --primary-50: #d8d6ff;
   --primary-100: #c1beff;
   --primary-200: #aaa5ff;
   --primary-300: #938dff;
   --primary-400: #7b74ff;
-
-  /* main */
-
   --primary-500: #4338ca;
   --primary-600: #554ed9;
   --primary-700: #4640b3;
@@ -25,8 +21,6 @@
   --primary-900: #282566;
   --primary-1000: #191740;
   --primary-1100: #0a0919;
-
-  /* grey */
 
   --grey-0: #fafbfc;
   --grey-50: #f2f4f8;
@@ -42,8 +36,6 @@
   --grey-1000: #333538;
   --grey-1100: #141516;
 
-  /* rest */
-
   --black: #222;
   --green-dark: #0f5132;
   --green-light: #d1e7dd;
@@ -51,8 +43,7 @@
   --red-light: #f8d7da;
   --white: #fff;
 
-  /* box shadows */
-
+  /* Box Shadows */
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -61,23 +52,23 @@
   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-  /* typography */
-
+  /* Typography */
   --bodyFont: 'Montserrat', sans-serif;
-  --defaultFontSize: 87.5%;
-  --extraSmallText: 0.7em;
   --headingFont: 'Inconsolata', monospace;
+  --defaultFontSize: 87.5%;
   --smallText: 0.8em;
+  --extraSmallText: 0.7em;
 
-  /* rest */
-
-  --backgroundColor: var(--grey-0);
-  --borderRadius: 0.25rem;
-  --fixed-width: 600px;
-  --letterSpacing: 1px;
+  /* Layout & Spacing */
   --max-width: 1120px;
-  --textColor: var(--grey-1000);
+  --fixed-width: 600px;
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+
+  /* Transitions & Others */
   --transition: 0.3s ease-in-out all;
+  --textColor: var(--grey-1000);
+  --backgroundColor: var(--grey-0);
 }
 
 html {
@@ -132,11 +123,6 @@ h5 {
   font-size: 1.25rem;
 }
 
-small,
-.text-small {
-  font-size: var(--smallText);
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -144,20 +130,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-.img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-}
-
-.form {
-  background: var(--white);
-  border-radius: var(--borderRadius);
-  box-shadow: var(--shadow-2);
-  padding: 2rem 2.5rem;
-  width: 100%;
 }
 
 label {
@@ -177,17 +149,40 @@ textarea {
   width: 100%;
 }
 
-.form-row {
-  margin-bottom: 1rem;
-}
-
 textarea {
   height: 7rem;
   width: 100%;
 }
 
+hr {
+  border-top: var(--line);
+}
+
 ::placeholder {
   color: var(--grey-600);
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+
+.img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.form {
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  width: 100%;
+}
+
+.form-row {
+  margin-bottom: 1rem;
 }
 
 .form-alert {
@@ -195,10 +190,6 @@ textarea {
   font-size: var(--extraSmallText);
   letter-spacing: var(--letterSpacing);
   text-transform: capitalize;
-}
-
-hr {
-  border-top: var(--line);
 }
 
 button,
