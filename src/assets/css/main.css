@@ -297,12 +297,6 @@ form > *:last-child {
 
 /* loading */
 
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .loading {
   animation: spinner 0.6s linear infinite;
   border-radius: 50%;
@@ -734,6 +728,12 @@ form > *:last-child {
 .quote-author {
   font-size: 0.875rem; /* 14px */
   line-height: 1.25rem; /* 20px */
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (min-width: 576px) {
