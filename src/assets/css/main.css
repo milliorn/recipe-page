@@ -846,13 +846,14 @@ form > *:last-child {
   }
 
   .recipes-container {
-    gap: 1rem;
+    /* gap: 1rem; */
     grid-template-columns: 200px 1fr;
   }
 
   .recipes-list,
   .tags-page {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4rem;
   }
 
   .recipe-img {
