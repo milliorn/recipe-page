@@ -528,7 +528,6 @@ form > *:last-child {
   display: grid;
   gap: 2rem 1rem;
   padding-bottom: 3rem;
-  
 }
 
 .tag-container-span {
@@ -789,6 +788,10 @@ form > *:last-child {
 }
 
 @media screen and (min-width: 992px) {
+  .hero {
+    margin-bottom: 0rem;
+  }
+
   .navbar {
     height: 6rem;
   }
@@ -845,10 +848,14 @@ form > *:last-child {
     grid-template-columns: 200px 1fr;
   }
 
+  .recipes-container span {
+    /* gap: 1rem; */
+    margin-top: 1rem;
+  }
   .recipes-list,
   .tags-page {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   .recipe-img {
