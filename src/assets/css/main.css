@@ -331,12 +331,6 @@ form > *:last-child {
   width: 100%;
 }
 
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .form-loading::after {
   animation: spinner 0.6s linear infinite;
   border-radius: 50%;
@@ -534,6 +528,7 @@ form > *:last-child {
   display: grid;
   gap: 2rem 1rem;
   padding-bottom: 3rem;
+  
 }
 
 .tag-container-span {
