@@ -71,24 +71,20 @@
   --backgroundColor: var(--grey-0);
 }
 
+/* Base Styles */
 html {
   font-size: var(--defaultFontSize);
 }
 
 body {
+  font-family: var(--bodyFont);
   background: var(--backgroundColor);
   color: var(--textColor);
-  font-family: var(--bodyFont);
   font-weight: 400;
   line-height: 1.75;
 }
 
-p {
-  margin: 0;
-  margin-bottom: 1rem;
-  max-width: 40em;
-}
-
+/* Typography */
 h1,
 h2,
 h3,
@@ -123,15 +119,24 @@ h5 {
   font-size: 1.25rem;
 }
 
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 40em;
+}
+
+/* Lists */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* Links */
 a {
   text-decoration: none;
 }
 
+/* Forms */
 label {
   display: block;
   font-size: var(--smallText);
@@ -142,18 +147,17 @@ label {
 input,
 textarea {
   background: var(--grey-0);
-  border-color: transparent;
-  border-radius: var(--borderRadius);
   border: 1px solid var(--grey-300);
+  border-radius: var(--borderRadius);
   padding: 0.375rem 0.75rem;
   width: 100%;
 }
 
 textarea {
   height: 7rem;
-  width: 100%;
 }
 
+/* Miscellaneous */
 hr {
   border-top: var(--line);
 }
@@ -165,31 +169,6 @@ hr {
 small,
 .text-small {
   font-size: var(--smallText);
-}
-
-.img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-}
-
-.form {
-  background: var(--white);
-  border-radius: var(--borderRadius);
-  box-shadow: var(--shadow-2);
-  padding: 2rem 2.5rem;
-  width: 100%;
-}
-
-.form-row {
-  margin-bottom: 1rem;
-}
-
-.form-alert {
-  color: var(--red-dark);
-  font-size: var(--extraSmallText);
-  letter-spacing: var(--letterSpacing);
-  text-transform: capitalize;
 }
 
 button,
@@ -232,6 +211,35 @@ button.hipster:hover {
 
 button.block {
   width: 100%;
+}
+
+form > *:last-child {
+  margin-bottom: 0;
+}
+
+.img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.form {
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  width: 100%;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-alert {
+  color: var(--red-dark);
+  font-size: var(--extraSmallText);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
 }
 
 /* Basic Classes */
@@ -280,10 +288,6 @@ button.block {
   height: 0.2rem;
   margin: 0 auto;
   width: 7rem;
-}
-
-form > *:last-child {
-  margin-bottom: 0;
 }
 
 /* loading */
