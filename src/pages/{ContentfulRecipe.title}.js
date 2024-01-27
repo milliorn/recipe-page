@@ -6,6 +6,10 @@ import React from 'react'
 import SiteSeo from '../components/SiteSeo'
 import slugify from 'slugify'
 
+const Head = ({ title, description }) => (
+  <SiteSeo title={title} description={description} />
+)
+
 /* Boilerplate code to programmatically produce a template for all recipe pages */
 const RecipeTemplate = ({ data }) => {
   const {
@@ -19,8 +23,10 @@ const RecipeTemplate = ({ data }) => {
   } = data.contentfulRecipe
   const pathToImage = getImage(image)
   const { tags, instructions, ingredients, tools } = content
+
   return (
     <Layout>
+      <Head title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
@@ -138,7 +144,3 @@ export const query = graphql`
 `
 
 export default RecipeTemplate
-
-export const Head = ({ title, description }) => (
-  <SiteSeo title={title} description={description} />
-)
