@@ -651,6 +651,7 @@ form > *:last-child {
   flex-wrap: wrap;
   font-size: 0.7em;
   font-weight: 600;
+  gap: 0.5rem;
 }
 
 .recipe-tags a {

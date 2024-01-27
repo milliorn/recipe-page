@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import quotesData from '../assets/data/quotes.json' // Adjust the path as needed
 
 const RandomQuote = () => {
-  const [ quote, setQuote ] = useState({ author: '', quote: '' })
+  const [quote, setQuote] = useState({ author: '', quote: '' })
 
   useEffect(() => {
     // Function to select a random quote by id
     const getRandomQuote = () => {
       const randomIndex = Math.floor(Math.random() * quotesData.quotes.length)
-      return quotesData.quotes[ randomIndex ]
+      return quotesData.quotes[randomIndex]
     }
 
     setQuote(getRandomQuote())
