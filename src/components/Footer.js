@@ -1,12 +1,18 @@
 import React from 'react'
 
-/* Setup footer for every page */
+// Footer component: renders a footer with dynamic copyright date and a link to GatsbyJS.
 const Footer = () => {
   return (
     <footer className="page-footer">
       <p>
         &copy; {new Date().getFullYear()} <span>React Recipes</span> Built with{' '}
-        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">GatsbyJS</a>
+        <a
+          href="https://github.com/milliorn/recipe-page"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GatsbyJS
+        </a>
       </p>
     </footer>
   )
