@@ -6,8 +6,10 @@ const SiteSeo = ({ title, description, children }) => {
   const { title: defaultTitle, description: defaultDescription } =
     useSiteMetadata()
 
+  const seoTitle = title ? `${title} | Simply Recipes` : defaultTitle;
+
   const seo = {
-    title: `${title} | Simply Recipes` || defaultTitle,
+    title: seoTitle,
     description: description || defaultDescription
   }
 
