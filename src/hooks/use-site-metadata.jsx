@@ -12,5 +12,5 @@ export const useSiteMetadata = () => {
     }
   `)
 
-  return data.site.siteMetadata
+  return data?.site?.siteMetadata || { title: '', description: '' }
 }
