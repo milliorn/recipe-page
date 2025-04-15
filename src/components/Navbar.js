@@ -16,7 +16,7 @@ const Navbar = () => {
           <button
             aria-label="menu button"
             className="nav-btn"
-            type="submit"
+            type="button"
             onClick={() => setShow(!show)}
           >
             <FiAlignJustify />
