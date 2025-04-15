@@ -14,6 +14,7 @@ const Navbar = () => {
             <img src={logo} alt="simply recipes" />
           </Link>
           <button
+            aria-expanded={show}
             aria-label="menu button"
             className="nav-btn"
             type="button"
