@@ -3,15 +3,14 @@ const setupTags = recipes => {
   const allTags = {}
 
   recipes.forEach(recipe => {
-    recipe.content.tags.forEach(tag => {
-      if (allTags[tag]) {
-        allTags[tag] = allTags[tag] + 1
-      } else {
-        allTags[tag] = 1
-      }
-    })
+    if (recipe.content && Array.isArray(recipe.content.tags)) {
+      recipe.content.tags.forEach(tag => {
+        allTags[tag] = (allTags[tag] || 0) + 1
+      })
+    }
   })
 
+  // Convert the object to an array of [tag, count] pairs and sort alphabetically by tag
   const newTags = Object.entries(allTags).sort((a, b) => {
     const [firstTag] = a
     const [secondTag] = b
