@@ -61,7 +61,7 @@
 
   /* Layout & Spacing */
   --max-width: 1120px;
-  --fixed-width: 600px;
+  /* --fixed-width: 600px; */
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
 
@@ -158,9 +158,9 @@ textarea {
 }
 
 /* Miscellaneous */
-hr {
+/* hr {
   border-top: var(--line);
-}
+} */
 
 ::placeholder {
   color: var(--grey-600);
@@ -193,7 +193,7 @@ button:hover,
   color: var(--white);
 }
 
-button.small {
+/* button.small {
   font-size: var(--smallText);
   padding: 0.25rem 0.5rem;
 }
@@ -207,7 +207,7 @@ button.hipster {
 button.hipster:hover {
   background: var(--primary-100);
   box-shadow: var(--shadow-2);
-}
+} */
 
 button.block {
   width: 100%;
@@ -217,11 +217,11 @@ form > *:last-child {
   margin-bottom: 0;
 }
 
-.img {
+/* .img {
   display: block;
   object-fit: cover;
   width: 100%;
-}
+} */
 
 .form {
   background: var(--white);
@@ -235,16 +235,16 @@ form > *:last-child {
   margin-bottom: 1rem;
 }
 
-.form-alert {
+/* .form-alert {
   color: var(--red-dark);
   font-size: var(--extraSmallText);
   letter-spacing: var(--letterSpacing);
   text-transform: capitalize;
-}
+} */
 
 /* Basic Classes */
 
-.alert {
+/* .alert {
   border-color: transparent;
   border-radius: var(--borderRadius);
   margin-bottom: 1rem;
@@ -259,9 +259,9 @@ form > *:last-child {
 .alert-danger {
   background-color: var(--red-light);
   color: var(--red-dark);
-}
+} */
 
-.container {
+/* .container {
   padding: 5rem 0;
 }
 
@@ -269,7 +269,7 @@ form > *:last-child {
   margin: 0 auto;
   max-width: var(--max-width);
   width: 90vw;
-}
+} */
 
 .page {
   margin: 0 auto;
@@ -278,7 +278,7 @@ form > *:last-child {
   width: 90vw;
 }
 
-.title {
+/* .title {
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -288,11 +288,11 @@ form > *:last-child {
   height: 0.2rem;
   margin: 0 auto;
   width: 7rem;
-}
+} */
 
 /* loading */
 
-.loading {
+/* .loading {
   animation: spinner 0.6s linear infinite;
   border-radius: 50%;
   border: 3px solid #ccc;
@@ -300,7 +300,7 @@ form > *:last-child {
   height: 6rem;
   margin: 0 auto;
   width: 6rem;
-}
+} */
 
 /* form loading */
 
@@ -777,10 +777,10 @@ form > *:last-child {
     --defaultFontSize: 112.5%;
   }
 
-  .hero-text h1 {
+  /* .hero-text h1 {
     font-size: 4rem;
     margin-bottom: 0;
-  }
+  } */
 }
 
 @media screen and (min-width: 992px) {
