@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import quotesData from '../assets/data/quotes.json' // Adjust the path as needed
+import quotesData from '../assets/data/quotes.json'
 
 const RandomQuote = () => {
   const [quote, setQuote] = useState({ author: '', quote: '' })
 
   useEffect(() => {
-    // Function to select a random quote by id
+    // Function to select a random quote safely
     const getRandomQuote = () => {
+      if (!quotesData?.quotes?.length) {
+        return { author: 'Unknown', quote: 'No quote available.' }
+      }
       const randomIndex = Math.floor(Math.random() * quotesData.quotes.length)
       return quotesData.quotes[randomIndex]
     }

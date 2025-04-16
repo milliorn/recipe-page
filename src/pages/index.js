@@ -13,7 +13,7 @@ export default function Home() {
         <header className="hero">
           <StaticImage
             src="../assets/images/main.jpeg"
-            alt="eggs"
+            alt="Eggs on a cutting board with some flour"
             className="hero-img"
             placeholder="blurred"
             layout="fullWidth"

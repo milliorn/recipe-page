@@ -10,7 +10,6 @@ const Head = ({ title, description }) => (
   <SiteSeo title={title} description={description} />
 )
 
-/* Boilerplate code to programmatically produce a template for all recipe pages */
 const RecipeTemplate = ({ data }) => {
   const {
     title,
@@ -19,10 +18,11 @@ const RecipeTemplate = ({ data }) => {
     prepTime,
     servings,
     description: { description },
-    image
+    image,
   } = data.contentfulRecipe
-  const pathToImage = getImage(image)
-  const { tags, instructions, ingredients, tools } = content
+
+  const pathToImage = image ? getImage(image) : null
+  const { tags = [], instructions = [], ingredients = [], tools = [] } = content || {}
 
   return (
     <Layout>
@@ -30,15 +30,16 @@ const RecipeTemplate = ({ data }) => {
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
-            <GatsbyImage
-              image={pathToImage}
-              alt={title}
-              className="about-img"
-            />
+            {pathToImage && (
+              <GatsbyImage
+                image={pathToImage}
+                alt={title}
+                className="recipe-hero-img" // renamed for clarity
+              />
+            )}
             <article className="recipe-info">
               <h2>{title}</h2>
               <p>{description}</p>
-
               <div className="recipe-icons">
                 <article>
                   <BsClock />
@@ -53,21 +54,21 @@ const RecipeTemplate = ({ data }) => {
                 <article>
                   <BsPeople />
                   <h5>serving</h5>
-                  <p>{servings} </p>
+                  <p>{servings}</p>
                 </article>
               </div>
-
               <p className="recipe-tags">
                 Tags :
-                {tags.sort().map((tag, index) => {
-                  const slug = slugify(tag, { lower: true })
-
-                  return (
-                    <Link to={`/tags/${slug}`} key={index}>
-                      {tag}
-                    </Link>
-                  )
-                })}
+                {[...tags]
+                  .sort()
+                  .map((tag, index) => {
+                    const slug = slugify(tag, { lower: true })
+                    return (
+                      <Link to={`/tags/${slug}`} key={tag || index}>
+                        {tag}
+                      </Link>
+                    )
+                  })}
               </p>
             </article>
           </section>
@@ -78,39 +79,37 @@ const RecipeTemplate = ({ data }) => {
               {instructions.map((item, index) => {
                 return (
                   <div key={index} className="single-instruction">
-                    <header>
+                    <header key={`${item.slice(0, 10)}-${index}`} className="single-instruction">
                       <p>step {index + 1}</p>
                       <div />
                     </header>
                     <p>{item}</p>
                   </div>
                 )
-              })}
-            </article>
+              })}            </article>
             <article className="second-column">
               <div>
                 <h4>ingredients</h4>
-                {ingredients.map((item, index) => {
-                  return (
-                    <p key={index} className="single-ingredient">
-                      {item
-                        .toLowerCase()
-                        .split(' ')
-                        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                        .join(' ')}
-                    </p>
-                  )
-                })}
+                {ingredients.map((item, index) => (
+                  <p key={`${item}-${index}`} className="single-ingredient">
+                    {item
+                      .toLowerCase()
+                      .split(' ')
+                      .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                      .join(' ')}
+                  </p>
+                ))}
               </div>
               <div>
                 <h4>tools</h4>
-                {tools.sort().map((item, index) => {
-                  return (
-                    <p key={index} className="single-tool">
+                {tools
+                  .slice()
+                  .sort()
+                  .map((item, index) => (
+                    <p key={item || index} className="single-tool">
                       {item}
                     </p>
-                  )
-                })}
+                  ))}
               </div>
             </article>
           </section>

@@ -39,27 +39,27 @@ const Contact = ({ data }) => {
               method="POST"
             >
               <div className="form-row">
-                <label htmlFor="name">your name</label>
-                <input type="text" name="name" id="name" />
+                <label htmlFor="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" required />
               </div>
               <div className="form-row">
-                <label htmlFor="email">your email</label>
-                <input type="text" name="email" id="email" />
+                <label htmlFor="email">Your Email</label>
+                <input type="email" name="email" id="email" placeholder="you@example.com" required />
               </div>
               <div className="form-row">
-                <label htmlFor="message">message</label>
-                <textarea name="message" id="message" />
+                <label htmlFor="message">Message</label>
+                <textarea name="message" id="message" placeholder="Your message here..." required />
               </div>
               <button type="submit" className="btn block">
-                submit
+                Submit
               </button>
             </form>
           </article>
         </section>
 
         <section className="featured-recipes">
-          <h5>Look at this!</h5>
-          <RecipesList recipes={recipes} />
+        <h5>Featured Recipes</h5>
+        <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>

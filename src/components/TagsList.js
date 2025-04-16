@@ -3,9 +3,20 @@ import React from 'react'
 import setupTags from '../utils/setupTags'
 import slugify from 'slugify'
 
-/* Setup component for tags */
+/*
+  TagsList component:
+  - Uses the setupTags utility to generate tags and
+  - their counts from the recipes data.
+  - Renders each tag as a link to a dedicated tag page.
+*/
 const TagsList = ({ recipes }) => {
+  // Early return if no recipes are provided or no tags are found
+  if (!recipes.length) {
+    return null
+  }
+
   const newTags = setupTags(recipes)
+
   return (
     <div className="tags-container">
       <span className="tag-container-span">Recipes</span>

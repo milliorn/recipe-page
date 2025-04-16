@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 /* Setup navbar for every page */
 const Navbar = () => {
-  const [show, setShow] = useState(false)
+  const [menuVisible, setMenuVisible] = useState(false)
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -14,20 +14,21 @@ const Navbar = () => {
             <img src={logo} alt="simply recipes" />
           </Link>
           <button
+            aria-expanded={menuVisible}
             aria-label="menu button"
             className="nav-btn"
-            type="submit"
-            onClick={() => setShow(!show)}
+            type="button"
+            onClick={() => setMenuVisible(!menuVisible)}
           >
             <FiAlignJustify />
           </button>
         </div>
-        <div className={show ? 'nav-links show-links' : 'nav-links'}>
+        <div className={menuVisible ? 'nav-links show-links' : 'nav-links'}>
           <Link
             to="/"
             className="nav-link"
             activeClassName="active-link"
-            onClick={() => setShow(false)}
+            onClick={() => setMenuVisible(false)}
           >
             home
           </Link>
@@ -35,7 +36,7 @@ const Navbar = () => {
             to="/recipes"
             className="nav-link"
             activeClassName="active-link"
-            onClick={() => setShow(false)}
+            onClick={() => setMenuVisible(false)}
           >
             recipes
           </Link>
@@ -43,7 +44,7 @@ const Navbar = () => {
             to="/tags"
             className="nav-link"
             activeClassName="active-link"
-            onClick={() => setShow(false)}
+            onClick={() => setMenuVisible(false)}
           >
             tags
           </Link>
@@ -51,12 +52,12 @@ const Navbar = () => {
             to="/about"
             className="nav-link"
             activeClassName="active-link"
-            onClick={() => setShow(false)}
+            onClick={() => setMenuVisible(false)}
           >
             about
           </Link>
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn" onClick={() => setShow(false)}>
+            <Link to="/contact" className="btn" onClick={() => setMenuVisible(false)}>
               contact
             </Link>
           </div>

@@ -18,22 +18,21 @@ const About = ({
           <article>
             <h2>My personal recipes</h2>
             <p>
-              Although this ia mock website to demonstrate what I can do in
+              Although this is a mock website to demonstrate what I can do in
               GatsbyJS and React, these are real recipes I personally use.
             </p>
             <p>
-              Hope you enjoy them. If you have any you would like to add click
-              on the contact button and send me your recipe!
+              Hope you enjoy them. If you have any you would like to add, click on the contact button and send me your recipe!
             </p>
           </article>
           <StaticImage
             src="../assets/images/about.jpeg"
-            alt="Person Pouring Salt in Bowl"
+            alt="Person pouring salt in a bowl"
             className="about-img"
             placeholder="blurred"
           />
         </section>
-        <section className="featured-recipes">
+        <section className="featured-recipes" aria-label="Featured Recipes">
           <h5>Look at these!</h5>
           <RecipesList recipes={recipes} />
         </section>

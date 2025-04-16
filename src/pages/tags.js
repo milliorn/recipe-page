@@ -8,6 +8,20 @@ import slugify from 'slugify'
 /* Setup tags page */
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
+
+  // Show fallback if no tags exist
+  if (!newTags.length) {
+    return (
+      <Layout>
+        <main className="page">
+          <section className="tags-page">
+            <p>No tags available.</p>
+          </section>
+        </main>
+      </Layout>
+    )
+  }
+
   return (
     <Layout>
       <main className="page">
