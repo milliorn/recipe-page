@@ -30,4 +30,4 @@ export default function Home() {
   )
 }
 
-export const Head = () => <SiteSeo title="Home " />
+export const Head = () => <SiteSeo title="Home" />
