@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="simply recipes" />
+            <img src={logo} alt="simply recipes" width="200" height="37" />
           </Link>
           <button
             aria-expanded={menuVisible}

@@ -45,12 +45,12 @@
 
   /* Box Shadows */
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* Typography */
   --bodyFont: 'Montserrat', sans-serif;
@@ -61,7 +61,7 @@
 
   /* Layout & Spacing */
   --max-width: 1120px;
-  --fixed-width: 600px;
+  /* --fixed-width: 600px; */
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
 
@@ -158,9 +158,9 @@ textarea {
 }
 
 /* Miscellaneous */
-hr {
+/* hr {
   border-top: var(--line);
-}
+} */
 
 ::placeholder {
   color: var(--grey-600);
@@ -193,7 +193,7 @@ button:hover,
   color: var(--white);
 }
 
-button.small {
+/* button.small {
   font-size: var(--smallText);
   padding: 0.25rem 0.5rem;
 }
@@ -207,7 +207,7 @@ button.hipster {
 button.hipster:hover {
   background: var(--primary-100);
   box-shadow: var(--shadow-2);
-}
+} */
 
 button.block {
   width: 100%;
@@ -217,11 +217,11 @@ form > *:last-child {
   margin-bottom: 0;
 }
 
-.img {
+/* .img {
   display: block;
   object-fit: cover;
   width: 100%;
-}
+} */
 
 .form {
   background: var(--white);
@@ -235,16 +235,16 @@ form > *:last-child {
   margin-bottom: 1rem;
 }
 
-.form-alert {
+/* .form-alert {
   color: var(--red-dark);
   font-size: var(--extraSmallText);
   letter-spacing: var(--letterSpacing);
   text-transform: capitalize;
-}
+} */
 
 /* Basic Classes */
 
-.alert {
+/* .alert {
   border-color: transparent;
   border-radius: var(--borderRadius);
   margin-bottom: 1rem;
@@ -259,9 +259,9 @@ form > *:last-child {
 .alert-danger {
   background-color: var(--red-light);
   color: var(--red-dark);
-}
+} */
 
-.container {
+/* .container {
   padding: 5rem 0;
 }
 
@@ -269,7 +269,7 @@ form > *:last-child {
   margin: 0 auto;
   max-width: var(--max-width);
   width: 90vw;
-}
+} */
 
 .page {
   margin: 0 auto;
@@ -278,7 +278,7 @@ form > *:last-child {
   width: 90vw;
 }
 
-.title {
+/* .title {
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -288,11 +288,11 @@ form > *:last-child {
   height: 0.2rem;
   margin: 0 auto;
   width: 7rem;
-}
+} */
 
 /* loading */
 
-.loading {
+/* .loading {
   animation: spinner 0.6s linear infinite;
   border-radius: 50%;
   border: 3px solid #ccc;
@@ -300,7 +300,7 @@ form > *:last-child {
   height: 6rem;
   margin: 0 auto;
   width: 6rem;
-}
+} */
 
 /* form loading */
 
@@ -477,33 +477,35 @@ form > *:last-child {
 
 /* Hero */
 
-.hero-img {
-  border-radius: var(--borderRadius);
-  height: 100%;
-}
-
 .hero {
-  height: 40vh;
-  margin-bottom: 2rem;
   position: relative;
+  /* Reserve space—choose a value that fits your design (e.g., 40vh or 500px) */
+  height: 40vh;
+  margin-bottom: 1rem;
 }
 
 .hero-container {
-  align-items: center;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: var(--borderRadius);
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
+
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero-img {
+  /* Remove conflicting inline height styles if needed */
   width: 100%;
+  height: 100%; /* Now 100% means 100% of the .hero container’s height */
+  object-fit: cover;
+  border-radius: var(--borderRadius);
 }
 
 .hero-text {
   color: var(--white);
   text-align: center;
+  min-height: 3rem;
 }
 
 /* Recipes */
@@ -719,6 +721,7 @@ form > *:last-child {
   font-size: 1rem; /* 16px */
   line-height: 1.5rem; /* 24px */
   margin: 8px;
+  min-height: 1rem;
 }
 
 .quote-author {
@@ -777,10 +780,10 @@ form > *:last-child {
     --defaultFontSize: 112.5%;
   }
 
-  .hero-text h1 {
+  /* .hero-text h1 {
     font-size: 4rem;
     margin-bottom: 0;
-  }
+  } */
 }
 
 @media screen and (min-width: 992px) {
