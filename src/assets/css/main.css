@@ -481,6 +481,7 @@ form > *:last-child {
   position: relative;
   /* Reserve space—choose a value that fits your design (e.g., 40vh or 500px) */
   height: 40vh;
+  margin-bottom: 1rem;
 }
 
 .hero-container {
