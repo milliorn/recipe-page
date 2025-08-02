@@ -18,11 +18,16 @@ const RecipeTemplate = ({ data }) => {
     prepTime,
     servings,
     description: { description },
-    image,
+    image
   } = data.contentfulRecipe
 
   const pathToImage = image ? getImage(image) : null
-  const { tags = [], instructions = [], ingredients = [], tools = [] } = content || {}
+  const {
+    tags = [],
+    instructions = [],
+    ingredients = [],
+    tools = []
+  } = content || {}
 
   return (
     <Layout>
@@ -59,16 +64,14 @@ const RecipeTemplate = ({ data }) => {
               </div>
               <p className="recipe-tags">
                 Tags :
-                {[...tags]
-                  .sort()
-                  .map((tag, index) => {
-                    const slug = slugify(tag, { lower: true })
-                    return (
-                      <Link to={`/tags/${slug}`} key={tag || index}>
-                        {tag}
-                      </Link>
-                    )
-                  })}
+                {[...tags].sort().map((tag, index) => {
+                  const slug = slugify(tag, { lower: true })
+                  return (
+                    <Link to={`/tags/${slug}`} key={tag || index}>
+                      {tag}
+                    </Link>
+                  )
+                })}
               </p>
             </article>
           </section>
@@ -79,14 +82,18 @@ const RecipeTemplate = ({ data }) => {
               {instructions.map((item, index) => {
                 return (
                   <div key={index} className="single-instruction">
-                    <header key={`${item.slice(0, 10)}-${index}`} className="single-instruction">
+                    <header
+                      key={`${item.slice(0, 10)}-${index}`}
+                      className="single-instruction"
+                    >
                       <p>step {index + 1}</p>
                       <div />
                     </header>
                     <p>{item}</p>
                   </div>
                 )
-              })}            </article>
+              })}{' '}
+            </article>
             <article className="second-column">
               <div>
                 <h4>ingredients</h4>

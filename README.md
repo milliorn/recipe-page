@@ -8,6 +8,8 @@ Recipe website in React
 
 Recipe-Page is a web application built with React that allows users to discover and share recipes. It provides a platform for food enthusiasts to find new recipes, create their own, and interact with a community of like-minded individuals.
 
+![Lighthouse report](./static/lightouse.png)
+
 ## Features
 
 - Browse a collection of diverse recipes
@@ -49,4 +51,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any questions or inquiries, please reach out to the project owner [@milliorn](https://github.com/milliorn).
+For any questions or inquiries, please open an Issue on this repo
