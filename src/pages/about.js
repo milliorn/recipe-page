@@ -22,7 +22,8 @@ const About = ({
               GatsbyJS and React, these are real recipes I personally use.
             </p>
             <p>
-              Hope you enjoy them. If you have any you would like to add, click on the contact button and send me your recipe!
+              Hope you enjoy them. If you have any you would like to add, click
+              on the contact button and send me your recipe!
             </p>
           </article>
           <StaticImage

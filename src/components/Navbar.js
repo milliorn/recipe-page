@@ -57,7 +57,11 @@ const Navbar = () => {
             about
           </Link>
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn" onClick={() => setMenuVisible(false)}>
+            <Link
+              to="/contact"
+              className="btn"
+              onClick={() => setMenuVisible(false)}
+            >
               contact
             </Link>
           </div>

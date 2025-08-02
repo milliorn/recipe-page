@@ -14,7 +14,11 @@ const RecipesList = ({ recipes = [] }) => {
         return (
           <Link key={id} to={`/${slug}`} className="recipe">
             {pathToImage && (
-              <GatsbyImage image={pathToImage} className="recipe-img" alt={title} />
+              <GatsbyImage
+                image={pathToImage}
+                className="recipe-img"
+                alt={title}
+              />
             )}
             <span>{title}</span>
             <p>
