@@ -33,6 +33,7 @@ assets:
       - any-glob-to-any-file:
           - src/assets/images/**
           - src/assets/data/**
+          - static/**
 
 configuration:
   - changed-files:
@@ -43,6 +44,7 @@ configuration:
           - .prettierignore
           - .env.development
           - .env.production
+          - .vscode/**
 
 dependencies:
   - changed-files:
