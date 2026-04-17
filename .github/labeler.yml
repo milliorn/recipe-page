@@ -1,0 +1,62 @@
+components:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/components/**
+
+pages:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/**
+
+templates:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/templates/**
+
+hooks:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/hooks/**
+
+utils:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/utils/**
+
+styles:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/assets/css/**
+
+assets:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/assets/images/**
+          - src/assets/data/**
+
+configuration:
+  - changed-files:
+      - any-glob-to-any-file:
+          - gatsby-config.js
+          - gatsby-node.js
+          - .prettierrc.json
+          - .prettierignore
+          - .env.development
+          - .env.production
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - package.json
+          - package-lock.json
+
+github_actions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/workflows/**
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+          - LICENSE
