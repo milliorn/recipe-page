@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "2.3.0",
-    "prettier": "3.8.3"
+    "prettier": "3.9.6"
   },
   "repository": {
     "type": "git",
