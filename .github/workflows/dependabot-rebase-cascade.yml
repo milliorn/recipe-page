@@ -1,9 +1,13 @@
 name: Dependabot stale rebase
 
 on:
-  pull_request_target:
-    types: [closed]
-    branches: [main]
+  workflow_run:
+    workflows: ["Dependabot reviewer"]
+    types: [completed]
+    # No branches filter: "Dependabot reviewer" runs on pull_request_target,
+    # so its head_branch is the dependabot/* branch, never main — a
+    # branches:[main] filter here would never match and this job would
+    # never fire.
 
 permissions:
   pull-requests: write
@@ -12,22 +16,27 @@ jobs:
   rebase-stale-dependabot-prs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
-    # Only fire when a Dependabot PR was actually merged (not closed/abandoned)
-    if: |
-      github.event.pull_request.merged == true &&
-      github.event.pull_request.user.login == 'dependabot[bot]'
+    # Only fire when the reviewer workflow approved and merged (conclusion = success)
+    if: github.event.workflow_run.conclusion == 'success'
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Dependabot only honors @dependabot commands from a commenter with
+      # push access. A GITHUB_TOKEN-authored comment (github-actions[bot])
+      # is silently rejected ("only users with push access"), which used to
+      # make this job re-comment on every PR on every run forever without
+      # ever actually rebasing anything. DEPENDABOT_REBASE_PAT must be a PAT
+      # (classic or fine-grained with pull-requests:write) or GitHub App
+      # installation token belonging to an account with push access.
+      GITHUB_TOKEN: ${{ secrets.DEPENDABOT_REBASE_PAT }}
 
     steps:
-      - name: Rebase remaining open Dependabot PRs
+      - name: Rebase stale/diverged open Dependabot PRs
         run: |
           gh pr list \
             --repo "${{ github.repository }}" \
             --author "app/dependabot" \
             --state open \
-            --json number \
-            --jq '.[].number' | \
+            --json number,mergeStateStatus \
+            --jq '.[] | select(.mergeStateStatus == "BEHIND" or .mergeStateStatus == "BLOCKED" or .mergeStateStatus == "DIRTY") | .number' | \
           while read -r pr; do
             echo "Requesting rebase on PR #$pr"
             gh pr comment "$pr" \
