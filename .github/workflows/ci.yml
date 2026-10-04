@@ -1,0 +1,50 @@
+# Verifies the site still installs and builds on every PR, including
+# Dependabot's. automerge.yml only inspects Dependabot's update metadata
+# (patch/minor/major) -- it never installs or builds anything, so a patch
+# release that breaks the Gatsby build would otherwise merge unchecked. Add
+# this workflow's job as a required status check (alongside merge-gatekeeper)
+# so that no longer happens.
+name: CI
+
+on:
+  pull_request:
+    branches: ["main"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # package.json's "lint" script runs `prettier --write`, which mutates
+      # files instead of failing -- not useful as a CI gate, so check instead.
+      - name: Check formatting
+        run: npx prettier --check .
+
+      # Gatsby build fetches content from Contentful at build time via
+      # gatsby-source-contentful, so it needs these credentials. Netlify's
+      # deploys already have them configured separately in Netlify's own
+      # dashboard; GitHub Actions needs its own copy as repo secrets.
+      - name: Build
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_API_KEY: ${{ secrets.CONTENTFUL_API_KEY }}
+        run: npm run build
