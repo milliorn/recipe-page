@@ -39,5 +39,12 @@ jobs:
       - name: Check formatting
         run: npx prettier --check .
 
+      # Gatsby build fetches content from Contentful at build time via
+      # gatsby-source-contentful, so it needs these credentials. Netlify's
+      # deploys already have them configured separately in Netlify's own
+      # dashboard; GitHub Actions needs its own copy as repo secrets.
       - name: Build
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_API_KEY: ${{ secrets.CONTENTFUL_API_KEY }}
         run: npm run build
