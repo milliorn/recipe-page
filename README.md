@@ -6,17 +6,16 @@ Recipe website in React
 
 ## Introduction
 
-Recipe-Page is a web application built with React that allows users to discover and share recipes. It provides a platform for food enthusiasts to find new recipes, create their own, and interact with a community of like-minded individuals.
+Recipe-Page is a static recipe site built with Gatsby and React. Recipe content is managed in Contentful and rendered into pages at build time.
 
 ![Lighthouse report](./static/lightouse.png)
 
 ## Features
 
-- Browse a collection of diverse recipes
-- Search for recipes based on ingredients, cuisine, or dietary restrictions
-- Create an account to save favorite recipes
-- Share recipes with others
-- Interact with the community through comments and ratings
+- Browse a collection of recipes
+- Filter recipes by tag
+- View recipe details: ingredients, instructions, tools, prep/cook time, and servings
+- Contact form for questions or feedback
 
 ## Getting Started
 
@@ -24,8 +23,8 @@ To get started with Recipe-Page, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/milliorn/recipe-page.git`
 2. Install dependencies: `npm install`
-3. Start the development server: `npm start`
-4. Open your browser and visit: `http://localhost:3000`
+3. Start the development server: `npm run develop`
+4. Open your browser and visit: `http://localhost:8000`
 
 ## Technologies Used
 
