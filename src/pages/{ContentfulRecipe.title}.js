@@ -39,7 +39,7 @@ const RecipeTemplate = ({ data }) => {
               <GatsbyImage
                 image={pathToImage}
                 alt={title}
-                className="recipe-hero-img" // renamed for clarity
+                className="recipe-hero-img"
               />
             )}
             <article className="recipe-info">
@@ -67,7 +67,7 @@ const RecipeTemplate = ({ data }) => {
                 {[...tags].sort().map((tag, index) => {
                   const slug = slugify(tag, { lower: true })
                   return (
-                    <Link to={`/tags/${slug}`} key={tag || index}>
+                    <Link to={`/tags/${slug}`} key={index}>
                       {tag}
                     </Link>
                   )
@@ -82,10 +82,7 @@ const RecipeTemplate = ({ data }) => {
               {instructions.map((item, index) => {
                 return (
                   <div key={index} className="single-instruction">
-                    <header
-                      key={`${item.slice(0, 10)}-${index}`}
-                      className="single-instruction"
-                    >
+                    <header>
                       <p>step {index + 1}</p>
                       <div />
                     </header>

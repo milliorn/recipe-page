@@ -29,8 +29,8 @@ const AllRecipes = () => {
   // if any transformations on the recipes array become complex memoize the computed results.
   // This can help prevent unnecessary recalculations on each render:
   const recipes = React.useMemo(
-    () => data.allContentfulRecipe.nodes,
-    [data.allContentfulRecipe.nodes]
+    () => data?.allContentfulRecipe?.nodes ?? [],
+    [data?.allContentfulRecipe?.nodes]
   )
 
   return (

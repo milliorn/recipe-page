@@ -9,6 +9,9 @@ const RecipesList = ({ recipes = [] }) => {
     <div className="recipes-list">
       {recipes.map(recipe => {
         const { id, title, image, prepTime, cookTime } = recipe
+        if (!title) {
+          return null
+        }
         const pathToImage = image ? getImage(image) : null
         const slug = slugify(title, { lower: true })
         return (

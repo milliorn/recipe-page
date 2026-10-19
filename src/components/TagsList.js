@@ -9,7 +9,7 @@ import slugify from 'slugify'
   - their counts from the recipes data.
   - Renders each tag as a link to a dedicated tag page.
 */
-const TagsList = ({ recipes }) => {
+const TagsList = ({ recipes = [] }) => {
   // Early return if no recipes are provided or no tags are found
   if (!recipes.length) {
     return null
