@@ -16,8 +16,13 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  if (result.errors) {
+    throw new Error(result.errors.map(e => e.message).join('\n'))
+  }
+
   result.data.allContentfulRecipe.nodes.forEach(recipe => {
-    recipe.content.tags.forEach(tag => {
+    const tags = recipe.content?.tags ?? []
+    tags.forEach(tag => {
       const tagSlug = slugify(tag, { lower: true })
       createPage({
         path: `/tags/${tagSlug}`,
