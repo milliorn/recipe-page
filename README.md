@@ -28,12 +28,11 @@ To get started with Recipe-Page, follow these steps:
 
 ## Technologies Used
 
+- Gatsby: Static site generator for building fast, optimized websites
 - React: JavaScript library for building user interfaces
-- CSS: Styling the application
-- HTML: Markup language for structuring the application
+- Contentful: Headless CMS used to manage recipe content
 - Styled Components: CSS-in-JS library for component styling
 - Axios: Promise-based HTTP client for making API requests
-- Gatsby: Static site generator for building fast, optimized websites
 
 ## Contributing
 
