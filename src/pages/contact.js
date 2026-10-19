@@ -17,9 +17,7 @@ const Contact = ({ data }) => {
               Have a question about a recipe, found a bug on the site, or just
               want to say hi? Send a message below and I'll get back to you.
             </p>
-            <p>
-              Suggestions for new recipes are always welcome too.
-            </p>
+            <p>Suggestions for new recipes are always welcome too.</p>
           </article>
 
           <article>
