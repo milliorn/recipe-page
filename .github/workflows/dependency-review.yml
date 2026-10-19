@@ -1,6 +1,6 @@
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
-name: "Dependency review"
+name: 'Dependency review'
 
 # Run on every pull request targeting main.
 # Scans dependency manifest changes against GitHub's advisory database for known CVEs.
@@ -10,7 +10,7 @@ name: "Dependency review"
 # which keeps the required status check satisfied for all PRs.
 on:
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 # https://docs.github.com/en/enterprise-cloud@latest/code-security/supply-chain-security/understanding-your-software-supply-chain/using-the-dependency-submission-api
 concurrency:
