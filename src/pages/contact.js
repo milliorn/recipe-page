@@ -14,22 +14,10 @@ const Contact = ({ data }) => {
           <article className="contact-info">
             <h3>Want to get in touch?</h3>
             <p>
-              Lorem ipsum dolor sit amen consenter adipisicing elite. Ex
-              cumquat, venial quos amen, odic, bandit's nisi asperities alias
-              cum facer harem qui ecus solute? pariah's tenter venite neue
-              attune voluptatem.
+              Have a question about a recipe, found a bug on the site, or just
+              want to say hi? Send a message below and I'll get back to you.
             </p>
-            <p>
-              Lorem, ipsum dolor sit amen consenter adipisicing elite. Impeding
-              total a, site rerun ipsum ecus molesting ab rem nobs dolores, quia
-              veritas quid's attune perspiciatis id odic eos quia? Porno.
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-              repellendus at nobis incidunt dignissimos delectus labore qui quos
-              a, quisquam expedita pariatur illum nostrum adipisci numquam
-              consequuntur dolorum accusantium eaque.
-            </p>
+            <p>Suggestions for new recipes are always welcome too.</p>
           </article>
 
           <article>
