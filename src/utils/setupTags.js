@@ -1,9 +1,15 @@
+import { isPublishableRecipe } from './recipeSlug'
+
 /* Gather all tags to be consumed */
 const setupTags = recipes => {
   const allTags = {}
 
   recipes.forEach(recipe => {
-    if (recipe.content && Array.isArray(recipe.content.tags)) {
+    if (
+      isPublishableRecipe(recipe) &&
+      recipe.content &&
+      Array.isArray(recipe.content.tags)
+    ) {
       recipe.content.tags.forEach(tag => {
         allTags[tag] = (allTags[tag] || 0) + 1
       })

@@ -26,12 +26,12 @@ const Tags = ({ data }) => {
     <Layout>
       <main className="page">
         <section className="tags-page">
-          {newTags.map((tag, index) => {
+          {newTags.map(tag => {
             const [text, value] = tag
             const slug = slugify(text, { lower: true })
 
             return (
-              <Link to={`/tags/${slug}`} key={index} className="tag">
+              <Link to={`/tags/${slug}`} key={text} className="tag">
                 <p>{text.toUpperCase()}</p>
                 <p>
                   {value} {value === 0 || value === 1 ? 'Recipe' : 'Recipes'}
@@ -49,6 +49,7 @@ export const query = graphql`
   {
     allContentfulRecipe {
       nodes {
+        title
         content {
           tags
         }

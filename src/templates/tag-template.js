@@ -2,8 +2,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
 import RecipesList from '../components/RecipesList'
-// Uncomment the next line once you decide to use the SEO component
-// import SiteSeo from '../components/SiteSeo'
+import SiteSeo from '../components/SiteSeo'
 
 /*
   TagTemplate: A page template to display recipes filtered by a tag.
@@ -35,6 +34,8 @@ const TagTemplate = ({ data, pageContext }) => {
     </Layout>
   )
 }
+
+export const Head = ({ pageContext }) => <SiteSeo title={pageContext.tag} />
 
 export const query = graphql`
   query GetRecipeByTag($tag: String) {

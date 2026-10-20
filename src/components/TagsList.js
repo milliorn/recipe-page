@@ -9,9 +9,9 @@ import slugify from 'slugify'
   - their counts from the recipes data.
   - Renders each tag as a link to a dedicated tag page.
 */
-const TagsList = ({ recipes }) => {
+const TagsList = ({ recipes = [] }) => {
   // Early return if no recipes are provided or no tags are found
-  if (!recipes.length) {
+  if (!recipes?.length) {
     return null
   }
 
@@ -21,12 +21,12 @@ const TagsList = ({ recipes }) => {
     <div className="tags-container">
       <span className="tag-container-span">Recipes</span>
       <div className="tags-list">
-        {newTags.map((tag, index) => {
+        {newTags.map(tag => {
           const [text, value] = tag
           const slug = slugify(text, { lower: true })
 
           return (
-            <Link to={`/tags/${slug}`} key={index}>
+            <Link to={`/tags/${slug}`} key={text}>
               {text} ({value})
             </Link>
           )

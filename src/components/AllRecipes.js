@@ -25,13 +25,11 @@ const query = graphql`
 /* Setup recipes for every page */
 const AllRecipes = () => {
   const data = useStaticQuery(query)
+  const nodes = data?.allContentfulRecipe?.nodes ?? []
   // Although static queries are relatively stable,
   // if any transformations on the recipes array become complex memoize the computed results.
   // This can help prevent unnecessary recalculations on each render:
-  const recipes = React.useMemo(
-    () => data.allContentfulRecipe.nodes,
-    [data.allContentfulRecipe.nodes]
-  )
+  const recipes = React.useMemo(() => nodes, [nodes])
 
   return (
     <section className="recipes-container">
