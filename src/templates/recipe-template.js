@@ -6,24 +6,13 @@ import React from 'react'
 import SiteSeo from '../components/SiteSeo'
 import slugify from 'slugify'
 
-const Head = ({ title, description }) => (
-  <SiteSeo title={title} description={description} />
-)
-
 const RecipeTemplate = ({ data }) => {
   if (!data?.contentfulRecipe) {
     return null
   }
 
-  const {
-    title,
-    cookTime,
-    content,
-    prepTime,
-    servings,
-    description: { description } = {},
-    image
-  } = data.contentfulRecipe
+  const { title, cookTime, content, prepTime, servings, description, image } =
+    data.contentfulRecipe
 
   const pathToImage = image ? getImage(image) : null
   const {
@@ -35,7 +24,6 @@ const RecipeTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Head title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
@@ -48,7 +36,7 @@ const RecipeTemplate = ({ data }) => {
             )}
             <article className="recipe-info">
               <h2>{title}</h2>
-              <p>{description}</p>
+              <p>{description?.description}</p>
               <div className="recipe-icons">
                 <article>
                   <BsClock />
@@ -125,6 +113,14 @@ const RecipeTemplate = ({ data }) => {
       </main>
     </Layout>
   )
+}
+
+export const Head = ({ data }) => {
+  if (!data?.contentfulRecipe) {
+    return null
+  }
+  const { title, description } = data.contentfulRecipe
+  return <SiteSeo title={title} description={description?.description} />
 }
 
 export const query = graphql`
