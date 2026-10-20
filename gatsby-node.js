@@ -1,5 +1,6 @@
 const path = require('path')
 const slugify = require('slugify')
+const recipeSlug = require('./src/utils/recipeSlug')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -8,6 +9,8 @@ exports.createPages = async ({ graphql, actions }) => {
     query GetRecipes {
       allContentfulRecipe {
         nodes {
+          id
+          title
           content {
             tags
           }
@@ -17,7 +20,20 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allContentfulRecipe.nodes.forEach(recipe => {
-    recipe.content.tags.forEach(tag => {
+    // Recipes without a title are skipped by RecipesList, so skip
+    // creating their page too rather than publishing an orphan route.
+    if (recipe.title) {
+      createPage({
+        path: `/${recipeSlug(recipe)}`,
+        component: path.resolve(`src/templates/recipe-template.js`),
+        context: {
+          id: recipe.id
+        }
+      })
+    }
+
+    const tags = recipe.content?.tags ?? []
+    tags.forEach(tag => {
       const tagSlug = slugify(tag, { lower: true })
       createPage({
         path: `/tags/${tagSlug}`,

@@ -11,7 +11,7 @@ import slugify from 'slugify'
 */
 const TagsList = ({ recipes = [] }) => {
   // Early return if no recipes are provided or no tags are found
-  if (!recipes.length) {
+  if (!recipes?.length) {
     return null
   }
 

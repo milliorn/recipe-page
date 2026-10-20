@@ -11,13 +11,17 @@ const Head = ({ title, description }) => (
 )
 
 const RecipeTemplate = ({ data }) => {
+  if (!data?.contentfulRecipe) {
+    return null
+  }
+
   const {
     title,
     cookTime,
     content,
     prepTime,
     servings,
-    description: { description },
+    description: { description } = {},
     image
   } = data.contentfulRecipe
 
@@ -67,7 +71,7 @@ const RecipeTemplate = ({ data }) => {
                 {[...tags].sort().map((tag, index) => {
                   const slug = slugify(tag, { lower: true })
                   return (
-                    <Link to={`/tags/${slug}`} key={index}>
+                    <Link to={`/tags/${slug}`} key={`${tag}-${index}`}>
                       {tag}
                     </Link>
                   )
@@ -124,8 +128,8 @@ const RecipeTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query getSingleRecipe($title: String) {
-    contentfulRecipe(title: { eq: $title }) {
+  query getSingleRecipe($id: String) {
+    contentfulRecipe(id: { eq: $id }) {
       title
       cookTime
       content {
