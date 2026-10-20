@@ -49,6 +49,7 @@ export const query = graphql`
   {
     allContentfulRecipe {
       nodes {
+        title
         content {
           tags
         }
