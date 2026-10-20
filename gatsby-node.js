@@ -1,6 +1,6 @@
 const path = require('path')
 const slugify = require('slugify')
-const recipeSlug = require('./src/utils/recipeSlug')
+const { recipeSlug, isPublishableRecipe } = require('./src/utils/recipeSlug')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -20,9 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allContentfulRecipe.nodes.forEach(recipe => {
-    // Recipes without a title are skipped by RecipesList, so skip
-    // creating their page too rather than publishing an orphan route.
-    if (recipe.title) {
+    if (isPublishableRecipe(recipe)) {
       createPage({
         path: `/${recipeSlug(recipe)}`,
         component: path.resolve(`src/templates/recipe-template.js`),
