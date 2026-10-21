@@ -36,8 +36,13 @@ jobs:
             echo "::error::DEPENDABOT_REBASE_PAT resolved empty. Dependabot rejects @dependabot commands from unauthenticated/wrong-identity tokens ('only users with push access'), so this job would otherwise silently no-op instead of rebasing stale PRs. Regenerate the PAT (classic or fine-grained with pull-requests:write + push access to this repo) and update the DEPENDABOT_REBASE_PAT secret."
             exit 1
           fi
-          if ! gh api "repos/${{ github.repository }}" --silent; then
+          repo_json=$(gh api "repos/${{ github.repository }}") || {
             echo "::error::DEPENDABOT_REBASE_PAT is non-empty but was rejected by the GitHub API (revoked, expired, or malformed), so this job would otherwise silently no-op instead of rebasing stale PRs. Regenerate the PAT (classic or fine-grained with pull-requests:write + push access to this repo) and update the DEPENDABOT_REBASE_PAT secret."
+            exit 1
+          }
+          has_push=$(echo "$repo_json" | jq -r '.permissions.push // false')
+          if [ "$has_push" != "true" ]; then
+            echo "::error::DEPENDABOT_REBASE_PAT authenticates but lacks push access to this repository. Dependabot only honors @dependabot commands from a commenter with push access, so this job would otherwise silently no-op instead of rebasing stale PRs. Regenerate the PAT with push access to this repo and update the DEPENDABOT_REBASE_PAT secret."
             exit 1
           fi
 
