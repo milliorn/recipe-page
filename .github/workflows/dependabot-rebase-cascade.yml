@@ -29,15 +29,21 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.DEPENDABOT_REBASE_PAT }}
 
     steps:
-      - name: Verify DEPENDABOT_REBASE_PAT resolves
+      - name: Verify DEPENDABOT_REBASE_PAT is valid
         run: |
+          set -eo pipefail
           if [ -z "$GITHUB_TOKEN" ]; then
             echo "::error::DEPENDABOT_REBASE_PAT resolved empty. Dependabot rejects @dependabot commands from unauthenticated/wrong-identity tokens ('only users with push access'), so this job would otherwise silently no-op instead of rebasing stale PRs. Regenerate the PAT (classic or fine-grained with pull-requests:write + push access to this repo) and update the DEPENDABOT_REBASE_PAT secret."
+            exit 1
+          fi
+          if ! gh api user --silent; then
+            echo "::error::DEPENDABOT_REBASE_PAT is non-empty but was rejected by the GitHub API (revoked, expired, or malformed), so this job would otherwise silently no-op instead of rebasing stale PRs. Regenerate the PAT (classic or fine-grained with pull-requests:write + push access to this repo) and update the DEPENDABOT_REBASE_PAT secret."
             exit 1
           fi
 
       - name: Rebase stale/diverged open Dependabot PRs
         run: |
+          set -eo pipefail
           gh pr list \
             --repo "${{ github.repository }}" \
             --author "app/dependabot" \
