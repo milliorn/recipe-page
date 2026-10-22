@@ -6,20 +6,13 @@ import React from 'react'
 import SiteSeo from '../components/SiteSeo'
 import slugify from 'slugify'
 
-const Head = ({ title, description }) => (
-  <SiteSeo title={title} description={description} />
-)
-
 const RecipeTemplate = ({ data }) => {
-  const {
-    title,
-    cookTime,
-    content,
-    prepTime,
-    servings,
-    description: { description },
-    image
-  } = data.contentfulRecipe
+  if (!data?.contentfulRecipe) {
+    return null
+  }
+
+  const { title, cookTime, content, prepTime, servings, description, image } =
+    data.contentfulRecipe
 
   const pathToImage = image ? getImage(image) : null
   const {
@@ -31,7 +24,6 @@ const RecipeTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Head title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
@@ -39,12 +31,12 @@ const RecipeTemplate = ({ data }) => {
               <GatsbyImage
                 image={pathToImage}
                 alt={title}
-                className="recipe-hero-img" // renamed for clarity
+                className="recipe-hero-img"
               />
             )}
             <article className="recipe-info">
               <h2>{title}</h2>
-              <p>{description}</p>
+              <p>{description?.description}</p>
               <div className="recipe-icons">
                 <article>
                   <BsClock />
@@ -67,7 +59,7 @@ const RecipeTemplate = ({ data }) => {
                 {[...tags].sort().map((tag, index) => {
                   const slug = slugify(tag, { lower: true })
                   return (
-                    <Link to={`/tags/${slug}`} key={tag || index}>
+                    <Link to={`/tags/${slug}`} key={`${tag}-${index}`}>
                       {tag}
                     </Link>
                   )
@@ -82,10 +74,7 @@ const RecipeTemplate = ({ data }) => {
               {instructions.map((item, index) => {
                 return (
                   <div key={index} className="single-instruction">
-                    <header
-                      key={`${item.slice(0, 10)}-${index}`}
-                      className="single-instruction"
-                    >
+                    <header>
                       <p>step {index + 1}</p>
                       <div />
                     </header>
@@ -126,9 +115,17 @@ const RecipeTemplate = ({ data }) => {
   )
 }
 
+export const Head = ({ data }) => {
+  if (!data?.contentfulRecipe) {
+    return null
+  }
+  const { title, description } = data.contentfulRecipe
+  return <SiteSeo title={title} description={description?.description} />
+}
+
 export const query = graphql`
-  query getSingleRecipe($title: String) {
-    contentfulRecipe(title: { eq: $title }) {
+  query getSingleRecipe($id: String) {
+    contentfulRecipe(id: { eq: $id }) {
       title
       cookTime
       content {

@@ -1,14 +1,16 @@
 # Verifies the site still installs and builds on every PR, including
 # Dependabot's. automerge.yml only inspects Dependabot's update metadata
 # (patch/minor/major) -- it never installs or builds anything, so a patch
-# release that breaks the Gatsby build would otherwise merge unchecked. Add
-# this workflow's job as a required status check (alongside merge-gatekeeper)
-# so that no longer happens.
+# release that breaks the Gatsby build would otherwise merge unchecked.
+# Merge Gatekeeper (the only check listed under required_status_checks on
+# the main branch ruleset) has no checks/ignored input configured, so it
+# already waits on and aggregates this job before it can pass -- CI does
+# not need to be separately marked required.
 name: CI
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -26,10 +28,10 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Set up Node.js
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
