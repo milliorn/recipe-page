@@ -19,6 +19,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  if (result.errors) {
+    throw new Error(result.errors.map(e => e.message).join('\n'))
+  }
+
   result.data.allContentfulRecipe.nodes.forEach(recipe => {
     if (!isPublishableRecipe(recipe)) {
       return
