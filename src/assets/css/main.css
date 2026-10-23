@@ -754,12 +754,10 @@ form > *:last-child {
   }
 
   .recipes-container {
-    /* gap: 1rem; */
     grid-template-columns: 200px 1fr;
   }
 
   .recipes-container span {
-    /* gap: 1rem; */
     margin-top: 1rem;
   }
   .recipes-list,
