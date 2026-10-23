@@ -68,7 +68,7 @@ describe('createPages', () => {
       nodes: [{ id: 'r1', title: 'Sweet Iced Tea' }]
     })
 
-    await expect(createPages({ graphql, actions })).resolves.not.toThrow()
+    await expect(createPages({ graphql, actions })).resolves.toBeUndefined()
     expect(createPage).toHaveBeenCalledTimes(1)
     expect(createPage).toHaveBeenCalledWith(
       expect.objectContaining({ path: '/sweet-iced-tea-r1' })
