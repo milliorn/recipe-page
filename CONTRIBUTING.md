@@ -16,7 +16,7 @@ Run `npm test` to run the Jest suite with coverage. Coverage is measured only ag
 
 ## Node version
 
-CI pins Node 20, and `.nvmrc` matches it so `nvm use` gives you the exact version CI tests against. `package.json`'s `engines.node` field is deliberately wider (`>=18.0.0 <26`): it mirrors the range Gatsby's own packages declare as actually compatible, not CI's narrower test matrix, so it only warns when a version is genuinely unsupported rather than merely untested. If you hit a build issue specific to a Node version outside CI's, use `.nvmrc` to switch to 20 before assuming it's a bug.
+`.nvmrc` pins Node 20, and CI reads it directly (`setup-node`'s `node-version-file` input), so `nvm use` gives you the exact version CI tests against with one source of truth. `package.json`'s `engines.node` field is deliberately wider (`>=18.0.0 <26`): it mirrors the range Gatsby's own packages declare as actually compatible, not CI's narrower test matrix, so it only warns when a version is genuinely unsupported rather than merely untested. If you hit a build issue specific to a Node version outside CI's, use `.nvmrc` to switch to 20 before assuming it's a bug.
 
 ## Submitting changes
 
