@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 const recipeSlug = require('./recipeSlug')
 const { isPublishableRecipe } = require('./recipeSlug')
 

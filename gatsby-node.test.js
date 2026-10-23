@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 const { createPages } = require('./gatsby-node')
 
 const buildArgs = ({ errors, nodes }) => {

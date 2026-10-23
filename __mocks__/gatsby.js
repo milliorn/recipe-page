@@ -8,6 +8,5 @@ Link.displayName = 'Link'
 module.exports = {
   Link,
   graphql: jest.fn(),
-  StaticQuery: jest.fn(),
   useStaticQuery: jest.fn()
 }

@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 const setupTags = require('./setupTags').default
 
 describe('setupTags', () => {

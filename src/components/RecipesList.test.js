@@ -1,14 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import React from 'react'
 import RecipesList from './RecipesList'
-
-const baseRecipe = {
-  id: 'r1',
-  title: 'Sweet Iced Tea',
-  prepTime: 5,
-  cookTime: 10,
-  image: null
-}
+import { baseRecipe } from '../test-utils/fixtures'
 
 describe('RecipesList', () => {
   it('renders nothing for an empty recipes array', () => {

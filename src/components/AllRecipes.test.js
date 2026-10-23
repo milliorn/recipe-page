@@ -2,21 +2,13 @@ import { render, screen } from '@testing-library/react'
 import { useStaticQuery } from 'gatsby'
 import React from 'react'
 import AllRecipes from './AllRecipes'
+import { baseRecipe } from '../test-utils/fixtures'
 
 describe('AllRecipes', () => {
   it('composes TagsList and RecipesList from the static query data', () => {
     useStaticQuery.mockReturnValue({
       allContentfulRecipe: {
-        nodes: [
-          {
-            id: 'r1',
-            title: 'Sweet Iced Tea',
-            prepTime: 5,
-            cookTime: 10,
-            content: { tags: ['tea'] },
-            image: null
-          }
-        ]
+        nodes: [baseRecipe]
       }
     })
 
