@@ -1,0 +1,24 @@
+# Opens or updates a standing release PR on every push to main, tracking
+# version bumps and CHANGELOG.md entries from Conventional Commits since
+# the last release (lint-commits.yml already enforces that convention on
+# every PR, so release-please can rely on it). Merging that PR is what
+# actually cuts a release: it creates the git tag and a GitHub Release.
+# Nothing here runs automatically to completion; a release only happens
+# when the release PR is merged by a maintainer.
+name: Release Please
+
+on:
+  push:
+    branches: ['main']
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Run release-please
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0

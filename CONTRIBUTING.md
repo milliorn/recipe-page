@@ -18,6 +18,10 @@ Run `npm test` to run the Jest suite with coverage. Coverage is measured only ag
 
 `.nvmrc` pins Node 20, and CI reads it directly (`setup-node`'s `node-version-file` input), so `nvm use` gives you the exact version CI tests against with one source of truth. `package.json`'s `engines.node` field is deliberately wider (`>=18.0.0 <26`): it mirrors the range Gatsby's own packages declare as actually compatible, not CI's narrower test matrix, so it only warns when a version is genuinely unsupported rather than merely untested. If you hit a build issue specific to a Node version outside CI's, use `.nvmrc` to switch to 20 before assuming it's a bug.
 
+## Releases
+
+[release-please](https://github.com/googleapis/release-please) tracks merges to `main` and keeps a standing release PR up to date with the next version bump and `CHANGELOG.md` entry, derived from Conventional Commits (`feat`, `fix`, `perf`, `security`, and `docs` types appear in the changelog; `chore`, `ci`, `test`, `style`, and `refactor` do not, since this repo gets frequent Dependabot dependency bumps that would otherwise dominate every entry). Nothing is released automatically: merging that standing PR is what creates the git tag and the GitHub Release. `CHANGELOG.md` entries before 0.1.1 predate this tooling and this repo's adoption of Conventional Commits, and are hand-summarized from commit history instead.
+
 ## Submitting changes
 
 1. Fork the repository and create a branch for your change.
