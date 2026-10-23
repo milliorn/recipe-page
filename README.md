@@ -32,7 +32,6 @@ To get started with Recipe-Page, follow these steps:
 - React: JavaScript library for building user interfaces
 - Contentful: Headless CMS used to manage recipe content
 - Styled Components: CSS-in-JS library for component styling
-- Axios: Promise-based HTTP client for making API requests
 
 ## Contributing
 
