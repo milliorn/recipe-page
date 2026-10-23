@@ -6,6 +6,10 @@ Contributions are welcome.
 
 Open an [issue](https://github.com/milliorn/recipe-page/issues) describing the problem or idea.
 
+## Commit messages
+
+This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): `<type>[(scope)]: <description>`, e.g. `fix(css): correct spinner border color` or `chore(deps): bump prettier`. Common types: `feat`, `fix`, `chore`, `docs`, `refactor`, `test`, `style`, `ci`.
+
 ## Submitting changes
 
 1. Fork the repository and create a branch for your change.
