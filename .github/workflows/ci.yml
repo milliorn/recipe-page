@@ -44,6 +44,9 @@ jobs:
       - name: Check for unused dependencies
         run: npm run depcheck
 
+      - name: Run tests
+        run: npm test
+
       # Gatsby build fetches content from Contentful at build time via
       # gatsby-source-contentful, so it needs these credentials. Netlify's
       # deploys already have them configured separately in Netlify's own
