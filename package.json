@@ -4,6 +4,9 @@
   "name": "gatsby-recipe-page",
   "private": true,
   "version": "0.1.3",
+  "engines": {
+    "node": ">=18.0.0 <26"
+  },
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
