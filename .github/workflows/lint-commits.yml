@@ -34,3 +34,20 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           allowed-commit-types: 'feat,fix,docs,style,refactor,test,build,perf,ci,chore,revert,merge,wip,security'
+
+      # This repo squash-merges PRs with the PR title as the squash commit
+      # subject (settings: allow_merge_commit=false, squash_merge_commit_title=PR_TITLE),
+      # and that title is freely editable at merge time, separate from any
+      # commit message already checked above. release-please parses that
+      # resulting commit on main, so an invalid title here would silently
+      # skip the change or omit it from release notes even though every
+      # commit on the branch passed.
+      - name: Lint PR Title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          ALLOWED_TYPES: 'feat|fix|docs|style|refactor|test|build|perf|ci|chore|revert|merge|wip|security'
+        run: |
+          if ! echo "$PR_TITLE" | grep -qE "^($ALLOWED_TYPES)(\([^)]+\))?!?: .+"; then
+            echo "::error::PR title '$PR_TITLE' does not follow Conventional Commits syntax. This title becomes the squash merge commit that release-please parses on main."
+            exit 1
+          fi
