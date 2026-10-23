@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. Entries fro
 
 ### Unreleased history (2021-2026)
 
-The project had no version numbers before 0.1.1. The periods below summarize what happened, grouped by activity rather than by individual commit, since most commit messages from this era were free-form (e.g. "lint", "deps", "navbar") rather than typed.
+Grouped by activity rather than by individual commit, since most commit messages from this era were free-form (e.g. "lint", "deps", "navbar") rather than typed.
 
 - **Oct-Dec 2021** - Initial build-out: Gatsby scaffold, recipe/tag/about/contact/404 pages, Navbar/Footer/Layout components, Contentful integration, global CSS, early CI workflow experimentation.
 - **Jan-Apr 2022** - CI cleanup: removed several short-lived GitHub Action workflows, general refactor (#157).

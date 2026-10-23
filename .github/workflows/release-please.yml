@@ -11,6 +11,13 @@ on:
   push:
     branches: ['main']
 
+# No cancel-in-progress: release-please-action diffs against the manifest
+# and the existing release PR on each run, so a run that gets cancelled
+# mid-write could leave either half-updated. Queuing is cheap here since
+# merges to main are already serialized by GitHub.
+concurrency:
+  group: ${{ github.workflow }}
+
 permissions:
   contents: write
   pull-requests: write
