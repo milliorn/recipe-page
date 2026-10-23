@@ -22,4 +22,4 @@ Run `npm test` to run the Jest suite with coverage. Coverage is measured only ag
 4. Confirm the site builds: `npm run build`.
 5. Open a pull request against `main`.
 
-Every pull request runs through CI (build + formatting check) and dependency vulnerability scanning before it can be merged. CI's build step needs Contentful credentials to fetch recipe content, and forked pull requests do not have access to this repository's secrets, so the build check may fail for external contributions through no fault of your own. A maintainer will verify the build manually in that case.
+Every pull request runs through CI (formatting check, dependency check, tests, and build) and dependency vulnerability scanning before it can be merged. CI's build step needs Contentful credentials to fetch recipe content, and forked pull requests do not have access to this repository's secrets, so the build check may fail for external contributions through no fault of your own. A maintainer will verify the build manually in that case.
