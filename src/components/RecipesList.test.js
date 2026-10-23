@@ -14,6 +14,11 @@ describe('RecipesList', () => {
     expect(container.querySelector('.recipe')).not.toBeInTheDocument()
   })
 
+  it('renders nothing when recipes is explicitly null', () => {
+    const { container } = render(<RecipesList recipes={null} />)
+    expect(container.querySelector('.recipe')).not.toBeInTheDocument()
+  })
+
   it('filters out recipes with no title', () => {
     render(<RecipesList recipes={[{ id: 'r2' }, baseRecipe]} />)
     expect(screen.getAllByRole('link')).toHaveLength(1)

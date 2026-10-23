@@ -12,7 +12,7 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
 
 ## Testing
 
-Run `npm test` to run the Jest suite with coverage. Coverage is measured only against the files listed in `jest.config.js`'s `collectCoverageFrom`, not the whole repo, and `coverageThreshold` is set to match what that scoped set currently achieves. If you add tests for a file not yet in that list, add its path to `collectCoverageFrom` and update `coverageThreshold` to match the new baseline in the same pull request, so the floor never regresses and the measured set grows toward full coverage over time.
+Run `npm test` to run the Jest suite with coverage. Coverage is measured only against the files listed in `jest.config.js`'s `collectCoverageFrom`, not the whole repo, and `coverageThreshold` enforces a separate block per file so one well-covered file can never mask a gap in another. If you add tests for a file not yet in that list, add its path to `collectCoverageFrom` with its own `coverageThreshold` block matching what your new tests achieve, in the same pull request. Never lower an existing file's threshold; the floor only moves up as the measured set grows toward full coverage over time.
 
 ## Submitting changes
 

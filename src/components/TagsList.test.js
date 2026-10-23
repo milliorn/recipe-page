@@ -13,6 +13,11 @@ describe('TagsList', () => {
     expect(container).toBeEmptyDOMElement()
   })
 
+  it('renders nothing when recipes is explicitly null', () => {
+    const { container } = render(<TagsList recipes={null} />)
+    expect(container).toBeEmptyDOMElement()
+  })
+
   it('renders one link per distinct tag with its count', () => {
     const recipes = [
       { title: 'Recipe A', content: { tags: ['tea', 'cold'] } },

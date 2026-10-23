@@ -4,10 +4,10 @@ import React from 'react'
 import recipeSlug, { isPublishableRecipe } from '../utils/recipeSlug'
 
 /* Setup component for recipes */
-const RecipesList = ({ recipes = [] }) => {
+const RecipesList = ({ recipes }) => {
   return (
     <div className="recipes-list">
-      {recipes.map(recipe => {
+      {(recipes ?? []).map(recipe => {
         if (!isPublishableRecipe(recipe)) {
           return null
         }
