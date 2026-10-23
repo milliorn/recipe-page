@@ -23,7 +23,14 @@ jobs:
         with:
           fetch-depth: 0 # Fetches all history so all commits in the PR can be checked
 
+      # security is added to the action's own default list (not replaced)
+      # since release-please-config.json's changelog-sections relies on it
+      # as a real, usable commit type, confirmed in use by #596's merge
+      # commit title (though that slipped past this check at squash-merge
+      # time rather than being validated, since this workflow checks PR
+      # commits, not the final merge title).
       - name: Lint Commits
         uses: webiny/action-conventional-commits@7f91b1595ca1951cdb671ddc9f07a49081ec5b69 # v1.4.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          allowed-commit-types: 'feat,fix,docs,style,refactor,test,build,perf,ci,chore,revert,merge,wip,security'
