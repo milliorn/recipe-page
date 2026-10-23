@@ -1,0 +1,38 @@
+# Opens or updates a standing release PR on every push to main, tracking
+# version bumps and CHANGELOG.md entries from Conventional Commits since
+# the last release (lint-commits.yml already enforces that convention on
+# every PR, so release-please can rely on it). Merging that PR is what
+# actually cuts a release: it creates the git tag and a GitHub Release.
+# Nothing here runs automatically to completion; a release only happens
+# when the release PR is merged by a maintainer.
+name: Release Please
+
+on:
+  push:
+    branches: ['main']
+
+# No cancel-in-progress: release-please-action diffs against the manifest
+# and the existing release PR on each run, so a run that gets cancelled
+# mid-write could leave either half-updated. Queuing is cheap here since
+# merges to main are already serialized by GitHub.
+concurrency:
+  group: ${{ github.workflow }}
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # The default GITHUB_TOKEN can create this PR, but pull_request events
+      # it triggers land in an approval-required state, so ci.yml and
+      # merge-gatekeeper.yml would never auto-run on it. A PAT avoids that
+      # restriction, letting the release PR's checks run normally.
+      - name: Run release-please
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
