@@ -10,6 +10,7 @@ name: Release Please
 on:
   push:
     branches: ['main']
+  workflow_dispatch:
 
 # No cancel-in-progress: release-please-action diffs against the manifest
 # and the existing release PR on each run, so a run that gets cancelled
