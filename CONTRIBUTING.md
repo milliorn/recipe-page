@@ -14,6 +14,10 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
 
 Run `npm test` to run the Jest suite with coverage. Coverage is measured only against the files listed in `jest.config.js`'s `collectCoverageFrom`, not the whole repo, and `coverageThreshold` enforces a separate block per file so one well-covered file can never mask a gap in another. If you add tests for a file not yet in that list, add its path to `collectCoverageFrom` with its own `coverageThreshold` block matching what your new tests achieve, in the same pull request. Never lower an existing file's threshold; the floor only moves up as the measured set grows toward full coverage over time.
 
+## Node version
+
+CI pins Node 20, and `.nvmrc` matches it so `nvm use` gives you the exact version CI tests against. `package.json`'s `engines.node` field is deliberately wider (`>=18.0.0 <26`): it mirrors the range Gatsby's own packages declare as actually compatible, not CI's narrower test matrix, so it only warns when a version is genuinely unsupported rather than merely untested. If you hit a build issue specific to a Node version outside CI's, use `.nvmrc` to switch to 20 before assuming it's a bug.
+
 ## Submitting changes
 
 1. Fork the repository and create a branch for your change.
