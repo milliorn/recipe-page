@@ -12,6 +12,34 @@ Grouped by activity rather than by individual commit, since most commit messages
 - **Jan-Feb 2024** - Larger refactor pass: SiteSeo/RandomQuote components, GraphQL query simplification, Netlify adapter added, styling/typography overhaul, license updated to MIT.
 - **Apr-Dec 2025** - Periodic maintenance: LCP/CLS performance fixes, two seasonal update passes, lockfile updates, automerge/Dependabot config tweaks.
 
+## [0.2.0](https://github.com/milliorn/recipe-page/compare/v0.1.3...v0.2.0) (2026-11-24)
+
+
+### Features
+
+* add GitHub labeler configuration files ([#523](https://github.com/milliorn/recipe-page/issues/523)) ([5fa9b41](https://github.com/milliorn/recipe-page/commit/5fa9b415dbc09bb3e86a2e6409df47ea46cf590e))
+* automate releases with release-please ([#608](https://github.com/milliorn/recipe-page/issues/608)) ([eb1868b](https://github.com/milliorn/recipe-page/commit/eb1868b57dd56c834d844bff17cc3b05941628c2))
+* **ci:** add Merge Gatekeeper workflow for pull requests ([#525](https://github.com/milliorn/recipe-page/issues/525)) ([1f7feab](https://github.com/milliorn/recipe-page/commit/1f7feabe3d0ebaaf7e18c62eed1941d1d91507c2))
+* **ci:** add workflow for rebasing stale Dependabot pull requests ([17fdd4b](https://github.com/milliorn/recipe-page/commit/17fdd4be339638e42884e409a7dff24f01130275))
+
+
+### Bug Fixes
+
+* **ci:** validate workflow YAML formatting and guard dependabot rebase PAT ([#591](https://github.com/milliorn/recipe-page/issues/591)) ([b90a883](https://github.com/milliorn/recipe-page/commit/b90a883ac8b124ffe759e6c913055e5c485ae6ff))
+* **css:** replace undefined --clr-primary-5 token and remove dead CSS ([#594](https://github.com/milliorn/recipe-page/issues/594)) ([036cbbc](https://github.com/milliorn/recipe-page/commit/036cbbc0063f322207a18be40d90d888fe923ff5))
+* **gatsby-node:** guard GraphQL errors and null tags in createPages ([#592](https://github.com/milliorn/recipe-page/issues/592)) ([1969fb1](https://github.com/milliorn/recipe-page/commit/1969fb19bc565d4e2d4869fa0822e558c94d8059))
+* guard component null safety and fix React key collisions ([#593](https://github.com/milliorn/recipe-page/issues/593)) ([42e75bc](https://github.com/milliorn/recipe-page/commit/42e75bc61606f790f57cd7863b2e84c88c498f99))
+
+
+### Security
+
+* **contact:** add Formspree honeypot field to contact form ([#596](https://github.com/milliorn/recipe-page/issues/596)) ([0c99da8](https://github.com/milliorn/recipe-page/commit/0c99da8dfc05bd11ac2ae82a605bde779c06df42))
+
+
+### Documentation
+
+* **automerge:** clarify decision logic for update types in workflow ([662a30a](https://github.com/milliorn/recipe-page/commit/662a30ad091b2e5c32a0513072e669c1e6846d50))
+
 ### 0.1.3 (2026-04-18)
 
 
