@@ -2,7 +2,8 @@ name: Dependabot reviewer
 
 # Fires whenever Dependabot opens, updates, or reopens a PR targeting main.
 # pull_request_target runs in the context of the base branch, which gives the
-# GITHUB_TOKEN enough permission to approve and merge without extra secrets.
+# GITHUB_TOKEN enough permission to approve and close PRs. The merge itself
+# uses RELEASE_PLEASE_TOKEN (see the "Allow" step) so it triggers release-please.
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
@@ -14,12 +15,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
-# Minimum permissions needed:
-# - pull-requests: approve and comment on PRs
-# - contents: enable auto-merge (writes to the merge queue)
+# Minimum permissions needed by GITHUB_TOKEN:
+# - pull-requests: approve, comment on and close PRs
+# - contents: read only; enabling auto-merge now uses RELEASE_PLEASE_TOKEN
 permissions:
   pull-requests: write
-  contents: write
+  contents: read
 
 env:
   # Opt into Node.js 24 now ahead of the June 2, 2026 forced migration.
