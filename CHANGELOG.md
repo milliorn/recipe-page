@@ -17,7 +17,6 @@ Grouped by activity rather than by individual commit, since most commit messages
 
 ### Features
 
-* add GitHub labeler configuration files ([#523](https://github.com/milliorn/recipe-page/issues/523)) ([5fa9b41](https://github.com/milliorn/recipe-page/commit/5fa9b415dbc09bb3e86a2e6409df47ea46cf590e))
 * automate releases with release-please ([#608](https://github.com/milliorn/recipe-page/issues/608)) ([eb1868b](https://github.com/milliorn/recipe-page/commit/eb1868b57dd56c834d844bff17cc3b05941628c2))
 * **ci:** add Merge Gatekeeper workflow for pull requests ([#525](https://github.com/milliorn/recipe-page/issues/525)) ([1f7feab](https://github.com/milliorn/recipe-page/commit/1f7feabe3d0ebaaf7e18c62eed1941d1d91507c2))
 * **ci:** add workflow for rebasing stale Dependabot pull requests ([17fdd4b](https://github.com/milliorn/recipe-page/commit/17fdd4be339638e42884e409a7dff24f01130275))
