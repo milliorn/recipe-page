@@ -2,7 +2,8 @@ name: Dependabot reviewer
 
 # Fires whenever Dependabot opens, updates, or reopens a PR targeting main.
 # pull_request_target runs in the context of the base branch, which gives the
-# GITHUB_TOKEN enough permission to approve and merge without extra secrets.
+# GITHUB_TOKEN enough permission to approve and close PRs. The merge itself
+# uses RELEASE_PLEASE_TOKEN (see the "Allow" step) so it triggers release-please.
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
@@ -14,12 +15,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
-# Minimum permissions needed:
-# - pull-requests: approve and comment on PRs
-# - contents: enable auto-merge (writes to the merge queue)
+# Minimum permissions needed by GITHUB_TOKEN:
+# - pull-requests: approve, comment on and close PRs
+# - contents: read only; enabling auto-merge now uses RELEASE_PLEASE_TOKEN
 permissions:
   pull-requests: write
-  contents: write
+  contents: read
 
 env:
   # Opt into Node.js 24 now ahead of the June 2, 2026 forced migration.
@@ -57,11 +58,24 @@ jobs:
 
       # --auto queues the merge so all required branch protection checks must
       # pass first (e.g. dependency-review) before the merge goes through.
+      # The merge uses RELEASE_PLEASE_TOKEN (a PAT owned by milliorn), not
+      # GITHUB_TOKEN: GitHub never starts workflows from a push made with
+      # GITHUB_TOKEN, so release-please.yml would otherwise never run after a
+      # Dependabot merge. milliorn is also an allowed actor in the repo's
+      # Actions policy, so the resulting push event is permitted.
       - name: Allow — approve and merge
         if: steps.decision.outputs.action == 'allow'
+        env:
+          MERGE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
         run: |
+          # gh silently falls back to GITHUB_TOKEN when GH_TOKEN is empty,
+          # which would bring back the "no release-please run" problem.
+          if [ -z "$MERGE_TOKEN" ]; then
+            echo "::error::RELEASE_PLEASE_TOKEN is empty; refusing to merge with GITHUB_TOKEN, since that push would not trigger release-please.yml."
+            exit 1
+          fi
           gh pr review "$PR_URL" --approve -b "Auto-approved: **${{ steps.metadata.outputs.update-type }}** ${{ steps.metadata.outputs.package-ecosystem }} update."
-          gh pr merge "$PR_URL" --squash --auto
+          GH_TOKEN="$MERGE_TOKEN" gh pr merge "$PR_URL" --squash --auto
 
       - name: Deny — unexpected update
         if: steps.decision.outputs.action == 'deny'
